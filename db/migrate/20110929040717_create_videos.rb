@@ -1,0 +1,10 @@
+class CreateVideos < ActiveRecord::Migration
+  def change
+    create_table :videos do |t|
+      t.text :description
+      t.string :name
+      t.string :url
+      t.timestamps
+    end
+  end
+end
