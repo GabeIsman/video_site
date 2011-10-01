@@ -1,3 +1,18 @@
+<<<<<<< HEAD
 %h1
   Hello! This is Gabe
 
+=======
+%header#slider-wrapper.container_16
+	#slider-control-left.slider-control.grid_1.push_1
+	#slider.grid_12.push_1
+		- @featured.each do |video|
+			%div.slide{ :id => "slide-#{video.id}" }
+				%hgroup
+					%h1
+						= video.title
+						%h2
+						= video.description
+	#slider-control-right.slider-control.grid_1.push_1
+	.clear
+>>>>>>> 1b5858d03321ee652051c3bd0ad3bdd2ac6f2fcd
