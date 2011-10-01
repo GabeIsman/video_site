@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110929042925) do
+ActiveRecord::Schema.define(:version => 20111001183810) do
 
   create_table "tags", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(:version => 20110929042925) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "youtube_id"
+    t.string   "thumbnail_url"
+    t.text     "embed_html"
   end
 
 end

@@ -1,0 +1,10 @@
+%div
+  %h1
+    = video.title
+  %p
+    = video.description
+  %br
+  %p 
+    = video.tags.map(&:name).join(", ")
+  = raw(video.embed_html)
+
