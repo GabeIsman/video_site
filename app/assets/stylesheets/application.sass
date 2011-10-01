@@ -1,5 +1,8 @@
 $h1-fonts: "helvetica neue"
 
+*
+	line-height: 100%
+	
 li
 	list-style-type: none
 
@@ -16,21 +19,25 @@ header#preheader
 header#primary
 	border-bottom: 5px solid black
 	margin-top: 50px
-	h1
-		font-size: 50px
-		margin-bottom: 5px
+	hgroup
+		height: 55px
+		h1
+			font-size: 50px
+			margin-bottom: 5px
 	nav
 		#search-wrapper
 			float: right
-			height:  25px
+			width: 460px
+			height: 25px
 		ul
-			float:  right
+			float: right
 			li
 				border-top:  5px solid transparent
 				display:  block
 				font-family: $h1-fonts
+				font-size: 15px
 				float: left
-				height: 20px
+				height: 15px
 				line-height: 20px
 				margin-right: 20px
 				text-transform: uppercase

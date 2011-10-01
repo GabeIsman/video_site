@@ -1,3 +1,6 @@
+* {
+  line-height: 100%; }
+
 li {
   list-style-type: none; }
 
@@ -14,10 +17,14 @@ header#preheader {
 header#primary {
   border-bottom: 5px solid black;
   margin-top: 50px; }
-  header#primary h1 {
-    font-size: 50px;
-    margin-bottom: 5px; }
+  header#primary hgroup {
+    height: 55px; }
+    header#primary hgroup h1 {
+      font-size: 50px;
+      margin-bottom: 5px; }
   header#primary nav #search-wrapper {
+    float: right;
+    width: 460px;
     height: 25px; }
   header#primary nav ul {
     float: right; }
@@ -25,8 +32,9 @@ header#primary {
       border-top: 5px solid transparent;
       display: block;
       font-family: "helvetica neue";
+      font-size: 15px;
       float: left;
-      height: 20px;
+      height: 15px;
       line-height: 20px;
       margin-right: 20px;
       text-transform: uppercase; }
