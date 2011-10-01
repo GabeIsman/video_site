@@ -44,3 +44,30 @@ header#primary {
       border-top: 5px solid black; }
     header#primary nav ul li:hover {
       border-top: 5px solid #646464; }
+
+header#slider-wrapper {
+  margin: 50px 0;
+  overflow: hidden;
+  height: 400px; }
+  header#slider-wrapper .slider-control {
+    background-color: black;
+    cursor: pointer;
+    height: 400px; }
+  header#slider-wrapper #slider {
+    background-color: black;
+    height: 400px; }
+  header#slider-wrapper .slide {
+    background-color: #1e1e1e;
+    margin-left: 100px;
+    width: 500px;
+    height: 400px; }
+    header#slider-wrapper .slide hgroup {
+      background-color: #3c3c3c;
+      border-left: 5px solid #5a5a5a;
+      border-right: 5px solid #5a5a5a;
+      float: right;
+      width: 150px;
+      height: 400px; }
+      header#slider-wrapper .slide hgroup h1 {
+        color: white;
+        text-align: right; }
