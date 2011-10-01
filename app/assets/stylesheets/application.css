@@ -9,6 +9,13 @@ h1 {
   font-family: "helvetica neue";
   font-weight: 800; }
 
+h2 {
+  font-family: "helvetica neue";
+  font-weight: 300; }
+
+body {
+  background: url("lines.png"); }
+
 header#preheader {
   background-color: black;
   width: 100%;
@@ -16,7 +23,7 @@ header#preheader {
 
 header#primary {
   border-bottom: 5px solid black;
-  margin-top: 50px; }
+  padding-top: 50px; }
   header#primary hgroup {
     height: 55px; }
     header#primary hgroup h1 {
@@ -56,18 +63,27 @@ header#slider-wrapper {
   header#slider-wrapper #slider {
     background-color: black;
     height: 400px; }
-  header#slider-wrapper .slide {
-    background-color: #1e1e1e;
-    margin-left: 100px;
-    width: 500px;
-    height: 400px; }
-    header#slider-wrapper .slide hgroup {
-      background-color: #3c3c3c;
-      border-left: 5px solid #5a5a5a;
-      border-right: 5px solid #5a5a5a;
-      float: right;
-      width: 150px;
+    header#slider-wrapper #slider #slide-1 {
+      background: url("cropped-asian-hipster.jpg"); }
+    header#slider-wrapper #slider .slide {
+      background-color: #1e1e1e;
+      margin-left: 100px;
+      width: 500px;
       height: 400px; }
-      header#slider-wrapper .slide hgroup h1 {
-        color: white;
-        text-align: right; }
+      header#slider-wrapper #slider .slide .hgroup-push {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 300px; }
+      header#slider-wrapper #slider .slide .hgroup-wrapper {
+        background-color: rgba(0, 0, 0, 0.75); }
+        header#slider-wrapper #slider .slide .hgroup-wrapper hgroup {
+          height: 100px;
+          bottom: 0px; }
+          header#slider-wrapper #slider .slide .hgroup-wrapper hgroup h1 {
+            color: #c8c8c8;
+            font-size: 17px;
+            padding: 10px;
+            padding-bottom: 0px; }
+          header#slider-wrapper #slider .slide .hgroup-wrapper hgroup h2 {
+            color: #c8c8c8;
+            font-size: 14px;
+            padding: 10px; }
