@@ -3,10 +3,12 @@
 	#slider.grid_12.push_1
 		- @featured.each do |video|
 			%div.slide{ :id => "slide-#{video.id}" }
-				%hgroup
-					%h1
-						= video.title
+				.hgroup-push
+				.hgroup-wrapper
+					%hgroup
+						%h1
+							= video.title
 						%h2
-						= video.description
+							= video.description
 	#slider-control-right.slider-control.grid_1.push_1
 	.clear
