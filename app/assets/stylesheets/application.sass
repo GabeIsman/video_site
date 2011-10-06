@@ -58,39 +58,43 @@ header#primary
 			li:hover
 				border-top:  5px solid rgb(100,100,100)
 
-$slider-height: 400px
+$slider-height: 360px
+$slider-width: 480px
 header#slider-wrapper
-	margin: 50px 0
+	margin: 50px 240px
 	overflow:  hidden
+	width: $slider-width
 	height: $slider-height
-	.slider-control
-		background-color: black
-		cursor: pointer
-		height: $slider-height
+
 	#slider
-		background-color: black
+		overflow: hidden
 		height: $slider-height
-		#slide-1
-			background: url('cropped-asian-hipster.jpg')
+		width: $slider-width
 		.slide
-			background-color: rgb(30,30,30)
-			margin-left: 100px
-			width: 500px
+			background-color: rgb(0,0,0)
+			width: $slider-width
 			height: $slider-height
-			.hgroup-push
-				background-color: rgba(0,0,0,.5)
-				height: $slider-height * (3/4)
-			.hgroup-wrapper
-				background-color: rgba(0,0,0,.75)
-				hgroup
-					height: $slider-height / 4
-					bottom: 0px
-					h1
-						color: rgb(200,200,200)
-						font-size: 17px
-						padding: 10px
-						padding-bottom: 0px
-					h2
-						color: rgb(200,200,200)
-						font-size: 14px
-						padding: 10px
+			hgroup
+				position: absolute
+				width: $slider-width
+				z-index: 2
+				h1
+					color: rgb(200,200,200)
+					font-size: 25px
+					padding: 10px 20px
+					padding-bottom: 0px
+				h2
+					color: rgb(200,200,200)
+					font-size: 14px
+					line-height: 17px
+					padding: 10px 20px
+			canvas
+				position: absolute
+				width: $slider-width
+				height: $slider-height
+				z-index: 1
+			.embed
+				margin-left: 28px
+				position: absolute
+				width: 425px
+				height: $slider-height

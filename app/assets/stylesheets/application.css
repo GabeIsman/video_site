@@ -53,37 +53,39 @@ header#primary {
       border-top: 5px solid #646464; }
 
 header#slider-wrapper {
-  margin: 50px 0;
+  margin: 50px 240px;
   overflow: hidden;
-  height: 400px; }
-  header#slider-wrapper .slider-control {
-    background-color: black;
-    cursor: pointer;
-    height: 400px; }
+  width: 480px;
+  height: 360px; }
   header#slider-wrapper #slider {
-    background-color: black;
-    height: 400px; }
-    header#slider-wrapper #slider #slide-1 {
-      background: url("cropped-asian-hipster.jpg"); }
+    overflow: hidden;
+    height: 360px;
+    width: 480px; }
     header#slider-wrapper #slider .slide {
-      background-color: #1e1e1e;
-      margin-left: 100px;
-      width: 500px;
-      height: 400px; }
-      header#slider-wrapper #slider .slide .hgroup-push {
-        background-color: rgba(0, 0, 0, 0.5);
-        height: 300px; }
-      header#slider-wrapper #slider .slide .hgroup-wrapper {
-        background-color: rgba(0, 0, 0, 0.75); }
-        header#slider-wrapper #slider .slide .hgroup-wrapper hgroup {
-          height: 100px;
-          bottom: 0px; }
-          header#slider-wrapper #slider .slide .hgroup-wrapper hgroup h1 {
-            color: #c8c8c8;
-            font-size: 17px;
-            padding: 10px;
-            padding-bottom: 0px; }
-          header#slider-wrapper #slider .slide .hgroup-wrapper hgroup h2 {
-            color: #c8c8c8;
-            font-size: 14px;
-            padding: 10px; }
+      background-color: black;
+      width: 480px;
+      height: 360px; }
+      header#slider-wrapper #slider .slide hgroup {
+        position: absolute;
+        width: 480px;
+        z-index: 2; }
+        header#slider-wrapper #slider .slide hgroup h1 {
+          color: #c8c8c8;
+          font-size: 25px;
+          padding: 10px 20px;
+          padding-bottom: 0px; }
+        header#slider-wrapper #slider .slide hgroup h2 {
+          color: #c8c8c8;
+          font-size: 14px;
+          line-height: 17px;
+          padding: 10px 20px; }
+      header#slider-wrapper #slider .slide canvas {
+        position: absolute;
+        width: 480px;
+        height: 360px;
+        z-index: 1; }
+      header#slider-wrapper #slider .slide .embed {
+        margin-left: 28px;
+        position: absolute;
+        width: 425px;
+        height: 360px; }
