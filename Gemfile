@@ -18,6 +18,7 @@ gem 'mysql2', '> 0.3'
 gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'haml'
 gem 'sass'
+gem 'coffee-script'
 gem 'youtube_it'
 gem 'daemons'
 # Bundle the extra gems:

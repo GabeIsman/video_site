@@ -1,14 +1,12 @@
 %header#slider-wrapper.container_16
-	#slider-control-left.slider-control.grid_1.push_1
-	#slider.grid_12.push_1
+	#slider
 		- @featured.each do |video|
 			%div.slide{ :id => "slide-#{video.id}" }
-				.hgroup-push
-				.hgroup-wrapper
-					%hgroup
-						%h1
-							= video.title
-						%h2
-							= video.description
-	#slider-control-right.slider-control.grid_1.push_1
-	.clear
+				%hgroup
+					%h1
+						= video.title
+					%h2
+						= video.description
+				%canvas{ :id => "canvas-#{video.id}" }
+				.embed
+					= raw(video.embed_html)
