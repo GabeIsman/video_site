@@ -54,9 +54,13 @@ while($running) do
   else
     response = client.videos_by(:user => "OberlinCollege")
     Rails.logger.info "Videos by user failed." unless response
-    videos = response.videos
-    videos.each do |v|
-      add_or_update_video(v)
+    while true do
+      videos = response.videos
+      videos.each do |v|
+        add_or_update_video(v)
+      end
+      break unless response.next_page
+      response = client.videos_by(:user => "OberlinCollege", :page => response.next_page)
     end
   end
 
