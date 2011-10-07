@@ -1,0 +1,21 @@
+= form_for @video, :url => {:action => :update} do |f|
+  %table
+    %tr
+      %td
+        = f.label "Title"
+      %td
+        = f.text_field :title
+    %tr
+      %td  
+        = f.label "Description"
+      %td
+        = f.text_area :description
+    %tr
+      %td
+        = f.label "HTML"
+      %td
+        = f.text_area :embed_html
+        = f.hidden_field  :id, :value => @video.id
+    %tr
+      %td
+        = f.submit "Update"
