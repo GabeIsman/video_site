@@ -1,12 +1,21 @@
-%header#slider-wrapper.container_16
+%header#primary-header
+	%hgroup
+		%h1
+			Oberlin Videos
+.clear
+#slider-wrapper.grid_16
 	#slider
 		- @featured.each do |video|
-			%div.slide{ :id => "slide-#{video.id}" }
+			.slide{ :id => "slide-#{video.id}" }
 				%hgroup
 					%h1
 						= video.title
 					%h2
 						= video.description
+				.gloss
 				%canvas{ :id => "canvas-#{video.id}" }
-				.embed
-					= raw(video.embed_html)
+				= raw(video.embed_html)
+.clear
+- (1..6).each do |x|
+	.tag-wrapper
+.clear

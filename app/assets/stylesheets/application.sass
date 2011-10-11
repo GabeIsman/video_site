@@ -1,100 +1,175 @@
-$h1-fonts: "helvetica neue"
-
-*
-	line-height: 100%
-	
 li
 	list-style-type: none
-
-h1
-	color: black
-	font-family: $h1-fonts
-	font-weight: 800
-h2
-	font-family: $h1-fonts
-	font-weight: 300
-
 body
-	background: url('lines.png')
+	background-image: url('body-bg.png')
+	#body-wrapper
+		background-image: url('body-wrapper-bg.png')
+		width: 100%
+		height: 100%
 
-header#preheader
-	background-color: black
-	width: 100%
-	height: 50px
-
-#page-wrapper
-	//background-color: white
-
-
-header#primary
-	border-bottom: 5px solid black
-	padding-top: 50px
-	hgroup
-		height: 55px
-		h1
-			font-size: 50px
-			margin-bottom: 5px
-	nav
-		#search-wrapper
-			float: right
-			width: 460px
-			height: 25px
-		ul
-			float: right
-			li
-				border-top:  5px solid transparent
-				display:  block
-				font-family: $h1-fonts
-				font-size: 15px
-				float: left
-				height: 15px
-				line-height: 20px
-				margin-right: 20px
-				text-transform: uppercase
-			li:last-child
-				margin-right: 0
-			li.current-page
-				border-top: 5px solid black
-			li:hover
-				border-top:  5px solid rgb(100,100,100)
-
-$slider-height: 360px
-$slider-width: 480px
-header#slider-wrapper
-	margin: 50px 240px
-	overflow:  hidden
-	width: $slider-width
-	height: $slider-height
-
-	#slider
-		overflow: hidden
-		height: $slider-height
-		width: $slider-width
-		.slide
+		header#preheader-band
 			background-color: rgb(0,0,0)
-			width: $slider-width
-			height: $slider-height
+			width: 100%
+			height:  50px
+
+#page-wrapper-wrapper
+	background-color: rgba(0,0,0,.25)
+	#page-wrapper
+		background-image: url('bg.png')
+		padding-bottom: 90px
+		
+		$nav-height: 50px
+		nav#top
+			background-color: rgba(255,255,255,.25)
+			border-bottom-left-radius: 25px
+			border-bottom-right-radius: 25px
+			height: $nav-height
+			ul
+				background-color: rgba(255,255,255,.25)
+				float: left
+				margin-left: 100px
+				height: $nav-height
+				li
+					color: black
+					float: left
+					font-family: "helvetica neue"
+					font-size: 12px
+					font-weight: 300
+					text-align: center
+					line-height: $nav-height
+					margin-right: 10px
+					width: 90px
+					height: $nav-height
+				li:hover
+					background-color: rgba(255,255,255,.5)
+				li:last-child
+					margin-right: 0
+			form#search-form-wrapper
+				float: left
+				margin-left: 100px
+				width: 350px
+				height: $nav-height
+				input#search-form
+					background-color: rgba(255,255,255,.25)
+					border: none
+					float: left
+					font-family: "helvetica neue"
+					font-size: 12px
+					font-weight: 300
+					line-height: $nav-height
+					margin-left: 10px
+					padding: 0 10px
+					text-align: center
+					width: 240px - 20
+					height: $nav-height
+				input#go-button
+					background-color: rgba(255,255,255,.5)
+					border: none
+					float: left
+					font-family: "helvetica neue"
+					font-size: 12px
+					font-weight: 300
+					margin-left: 10px
+					width: 90px
+					height: $nav-height
+		
+		$primary-header-height: 50px
+		header#primary-header
+			background-color: rgba(0,0,0,.8)
+			border-top-left-radius: 25px
+			border-top-right-radius: 25px
+			float: right
+			margin-right: 10px
+			margin-top: 50px
+			width: 290px
+			height: $primary-header-height
 			hgroup
-				position: absolute
-				width: $slider-width
-				z-index: 2
 				h1
-					color: rgb(200,200,200)
-					font-size: 25px
-					padding: 10px 20px
-					padding-bottom: 0px
-				h2
-					color: rgb(200,200,200)
-					font-size: 14px
-					line-height: 17px
-					padding: 10px 20px
-			canvas
-				position: absolute
-				width: $slider-width
-				height: $slider-height
-				z-index: 1
-			.embed
-				margin-left: 28px
-				position: absolute
-				width: 425px
-				height: $slider-height
+					color: rgba(255,255,255,1)
+					font-family: "bebas neue"
+					font-size: 40px
+					font-weight: 800
+					line-height: $primary-header-height
+					text-align: center
+					text-transform: uppercase
+
+		$slide-width: 480px
+		$slide-height: 360px
+		#slider-wrapper
+			background-color: rgba(0,0,0,.8)
+			border-bottom: 10px solid rgba(100,0,0,.5)
+			border-top-left-radius: 20px
+			border-bottom-left-radius: 20px
+			border-bottom-right-radius: 20px
+			height: 475px
+			#slider
+				background-color: black
+				border-radius: 25px
+				margin-top: 25px
+				margin-left: 200px
+				width: $slide-width + 60
+				height: $slide-height + 65
+				.slide
+					margin-left: 30px
+					padding-top: 32px
+					position: relative
+					width: $slide-width - 7
+					height: $slide-height
+					.gloss
+						background-color: rgba(0,0,0,.5)
+						position: absolute
+						width: $slide-width
+						height: $slide-height	
+						z-index: 2					
+					hgroup
+						background-color: rgba(0,0,0,.25)
+						padding: 5px 10px 15px 10px
+						position: absolute
+						bottom: 0
+						width: $slide-width - 20
+						z-index: 3
+						h1
+							color: white
+							font-family: "helvetica neue"
+							font-size: 40px
+							font-weight: 800
+							line-height: 40px
+						h2
+							color: white
+							font-family: "helvetica neue"
+							font-size: 15px
+							font-weight: 300
+							margin-top: 10px
+					canvas
+						position: absolute
+						z-index: 1
+							
+			
+		header#featured-tag-wrapper
+			background-color: rgba(0,0,0,.8)
+			border-bottom: 10px solid rgba(100,0,0,.5)
+			border-bottom-left-radius: 25px
+			border-bottom-right-radius: 25px
+			float: left
+			margin-left: 10px
+			width: 290px
+			height: $primary-header-height
+			hgroup
+				h1
+					color: rgba(255,255,255,1)
+					font-family: "bebas neue"
+					font-size: 40px
+					font-weight: 800
+					line-height: $primary-header-height
+					text-align: center
+					text-transform: uppercase
+		
+		.tag-wrapper
+			background-color: rgba(0,0,0,.8)
+			border-bottom: 10px solid rgba(100,0,0,.5)
+			border-radius: 25px
+			float: left
+			margin-left: 60px
+			margin-top: 40px
+			width: 240px
+			height: 500px

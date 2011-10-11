@@ -7,21 +7,20 @@
 		= javascript_include_tag "jquery", "application"
 		= csrf_meta_tags
 	%body
-		%header#preheader
-		#page-wrapper.container_16
-			%header#primary.container_16
-				%hgroup.grid_8
-					%h1
-						Videos.Oberlin
-				%nav.grid_8
-					#search-wrapper
-					%ul
-						%li.current-page
-							home
-						%li
-							featured
-						%li
-							tags
-						%li
-							oberlin
-			= yield
+		#body-wrapper
+			%header#preheader-band
+			#page-wrapper-wrapper.container_16
+				#page-wrapper.container_16
+					%nav#top.grid_16
+						%ul
+							%li
+								oberlin
+							%li
+								home
+							%li
+								tags
+						%form#search-form-wrapper
+							%input#search-form{ :value => "search" }
+							%input#go-button{ :type => "submit", :value => "submit" }
+					.clear
+					= yield
