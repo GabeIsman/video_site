@@ -1,6 +1,10 @@
 li {
   list-style-type: none; }
 
+a {
+  color: inherit;
+  text-decoration: none; }
+
 body {
   background-image: url("body-bg.png"); }
   body #body-wrapper {
@@ -103,6 +107,7 @@ body {
         width: 540px;
         height: 425px; }
         #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide {
+          float: left;
           margin-left: 30px;
           padding-top: 32px;
           position: relative;
@@ -167,13 +172,14 @@ body {
       float: left;
       margin-left: 60px;
       margin-top: 40px;
-      width: 240px;
+      width: 390px;
       height: 500px; }
       #page-wrapper-wrapper #page-wrapper .tag-wrapper header.tag-header {
-        background-color: rgba(255, 255, 255, 0.25);
+        background-color: rgba(100, 0, 0, 0.5);
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        width: 240px;
+        margin-bottom: 25px;
+        width: 390px;
         height: 50px; }
         #page-wrapper-wrapper #page-wrapper .tag-wrapper header.tag-header hgroup h1 {
           color: white;
@@ -182,3 +188,22 @@ body {
           font-weight: 400;
           text-align: center;
           line-height: 50px; }
+      #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li {
+        margin-bottom: 25px; }
+        #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h1 {
+          color: #c8c8c8;
+          font-family: "helvetica neue";
+          font-size: 25px;
+          margin-right: 20px;
+          text-align: right; }
+        #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h2 {
+          color: #c8c8c8;
+          font-family: "helvetica neue";
+          font-size: 12px;
+          font-weight: 300;
+          margin: 10px; }
+        #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li img {
+          border: 5px solid black;
+          border-radius: 10px;
+          float: left;
+          margin: 5px 10px; }

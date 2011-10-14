@@ -1,5 +1,8 @@
 li
 	list-style-type: none
+a
+	color: inherit
+	text-decoration: none
 body
 	background-image: url('body-bg.png')
 	#body-wrapper
@@ -111,6 +114,7 @@ body
 				width: $slide-width + 60
 				height: $slide-height + 65
 				.slide
+					float: left
 					margin-left: 30px
 					padding-top: 32px
 					position: relative
@@ -171,6 +175,7 @@ body
 					text-align: center
 					text-transform: uppercase
 		
+		$tag-wrapper-width: 390px
 		.tag-wrapper
 			background-color: rgba(0,0,0,.8)
 			border-bottom: 10px solid rgba(100,0,0,.5)
@@ -178,13 +183,14 @@ body
 			float: left
 			margin-left: 60px
 			margin-top: 40px
-			width: 240px
+			width: $tag-wrapper-width
 			height: 500px
 			header.tag-header
-				background-color: rgba(255,255,255,.25)
+				background-color: rgba(100,0,0,.5)
 				border-top-left-radius: 25px
 				border-top-right-radius: 25px
-				width: 240px
+				margin-bottom: 25px
+				width: $tag-wrapper-width
 				height: 50px
 				hgroup
 					h1
@@ -194,3 +200,25 @@ body
 						font-weight: 400
 						text-align: center
 						line-height: 50px
+			ul
+				li
+					margin-bottom: 25px
+					hgroup
+						h1
+							color: rgb(200,200,200)
+							font-family: "helvetica neue"
+							font-size: 25px
+							margin-right: 20px
+							text-align: right
+						h2
+							color: rgb(200,200,200)
+							font-family: "helvetica neue"
+							font-size: 12px
+							font-weight: 300
+							margin: 10px
+					img
+						border: 5px solid black
+						border-radius: 10px
+						float: left
+						margin: 5px 10px
+			

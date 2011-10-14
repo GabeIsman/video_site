@@ -1,5 +1,41 @@
 $(document).ready ->
 	
+	# THE SLIDER
+	slider = $("#slider")
+	slide_width = 503
+	slides = $(".slide")
+	number_of_slides = slides.length
+	current_position = 1
+		
+		
+	slides.wrapAll('<div id="slide-inner"></div>')
+	$('#slide-inner').css
+		'width': number_of_slides * slide_width
+		
+	automate_callback = ->
+		automate( current_position )		
+	
+	
+	automate = ( current_position ) ->
+		$('#slide-inner').animate
+			'marginLeft': -( slide_width * current_position )
+			1000
+		if current_position < number_of_slides - 1
+			current_position += 1
+		else
+			current_position = 0	
+		setTimeout automate_callback, 5000
+		
+		
+
+						
+						
+	setTimeout automate_callback, 5000
+	
+	
+	
+	
+			
 	# click to hide the canvas
 	$('#canvas-3').parent().click ->
 		$('#canvas-3').css

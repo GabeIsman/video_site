@@ -7,7 +7,7 @@
 	#slider
 		- @featured.each do |video|
 			%div.slide{ :id => "slide-#{video.id}" }
-				%img{ :id => "image-#{video.id}", :src => "#{video.thumbnail_url}" }
+				%img{ :id => "image-#{video.id}", :src => "#{video.big_thumbnail_url}" }
 				%hgroup{ :id => "hgroup-#{video.id}"}
 					%h1
 						= video.title
@@ -24,14 +24,13 @@
 				%h1
 					=tag.name
 		%ul
-		- tag.videos.each do |video|
-			%li
-				%hgroup
-					%h1
-						%a{ :href => "" }
-							=video.title
-					%img
-						%a{ :href => ""}
-							%img{ :src => "#{video.thumbnail_url}" }
+			- tag.videos.each do |video|
+				%li
+					%a{ :href => ""}
+						%img{ :src => "#{video.thumbnail_url}" }
+					%hgroup
+						%h1
+							%a{ :href => "" }
+								=video.title
 .clear
 
