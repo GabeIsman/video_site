@@ -34,6 +34,8 @@ def add_or_update_video(yt_video)
   db_video.youtube_id = yt_video.video_id # unique identifier so we don't repeat stuff
   db_video.tags = process_tags yt_video.keywords 
   db_video.thumbnail_url = yt_video.thumbnails.first.url #there are actually many thumbnails, we could improve this by being smart about picking
+  # Three is a magic number -- the third thumbnail in the list is the big one
+  db_video.big_thumbnail_url = yt_video.thumbnails.select{|t| t.height == 360 && t.width == 480}.first.url
   db_video.embed_html = yt_video.embed_html # TODO make sure this doesn't break IE
   db_video.save!
 end
