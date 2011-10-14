@@ -1,6 +1,13 @@
 class VideoController < ApplicationController
   def index
     @featured = Video.limit(3)
+    @important_tags = []
+    @important_tags << Tag.find_by_name( 'awesome' )
+    @important_tags << Tag.find_by_name( 'students' )
+  end
+
+  def tags
+    
   end
 
   def all

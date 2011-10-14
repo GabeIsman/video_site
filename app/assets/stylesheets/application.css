@@ -99,6 +99,7 @@ body {
         border-radius: 25px;
         margin-top: 25px;
         margin-left: 200px;
+        overflow: hidden;
         width: 540px;
         height: 425px; }
         #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide {
@@ -140,7 +141,7 @@ body {
           #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide canvas {
             position: absolute;
             z-index: 1; }
-          #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide iframe {
+          #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide object {
             margin-left: 25px; }
     #page-wrapper-wrapper #page-wrapper header#featured-tag-wrapper {
       background-color: rgba(0, 0, 0, 0.8);
@@ -168,3 +169,16 @@ body {
       margin-top: 40px;
       width: 240px;
       height: 500px; }
+      #page-wrapper-wrapper #page-wrapper .tag-wrapper header.tag-header {
+        background-color: rgba(255, 255, 255, 0.25);
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        width: 240px;
+        height: 50px; }
+        #page-wrapper-wrapper #page-wrapper .tag-wrapper header.tag-header hgroup h1 {
+          color: white;
+          font-family: "bebas neue";
+          font-size: 35px;
+          font-weight: 400;
+          text-align: center;
+          line-height: 50px; }

@@ -107,6 +107,7 @@ body
 				border-radius: 25px
 				margin-top: 25px
 				margin-left: 200px
+				overflow: hidden
 				width: $slide-width + 60
 				height: $slide-height + 65
 				.slide
@@ -148,7 +149,7 @@ body
 					canvas
 						position: absolute
 						z-index: 1
-					iframe
+					object
 						margin-left: 25px
 			
 		header#featured-tag-wrapper
@@ -179,3 +180,17 @@ body
 			margin-top: 40px
 			width: 240px
 			height: 500px
+			header.tag-header
+				background-color: rgba(255,255,255,.25)
+				border-top-left-radius: 25px
+				border-top-right-radius: 25px
+				width: 240px
+				height: 50px
+				hgroup
+					h1
+						color: rgb(255,255,255)
+						font-family: "bebas neue"
+						font-size: 35px
+						font-weight: 400
+						text-align: center
+						line-height: 50px

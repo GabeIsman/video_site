@@ -15,9 +15,23 @@
 						= video.description
 				%div.gloss{ :id => "gloss-#{video.id}" }
 				%canvas{ :id => "canvas-#{video.id}" }
-				= raw(video.embed_html)
+				= video.embed_html.html_safe
 .clear
-- (1..6).each do |x|
-	.tag-wrapper{ :id => "tag-wrapper-#{x}" }
+- @important_tags.each do |tag|
+	.tag-wrapper{ :id => "tag-wrapper-#{tag.id}" }
+		%header.tag-header
+			%hgroup
+				%h1
+					=tag.name
+		%ul
+		- tag.videos.each do |video|
+			%li
+				%hgroup
+					%h1
+						%a{ :href => "" }
+							=video.title
+					%img
+						%a{ :href => ""}
+							%img{ :src => "#{video.thumbnail_url}" }
 .clear
 
