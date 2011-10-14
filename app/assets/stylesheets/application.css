@@ -107,6 +107,11 @@ body {
           position: relative;
           width: 473px;
           height: 360px; }
+          #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide img {
+            width: 460px;
+            height: 380px;
+            position: absolute;
+            display: none; }
           #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide .gloss {
             background-color: rgba(0, 0, 0, 0.5);
             position: absolute;
@@ -135,6 +140,8 @@ body {
           #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide canvas {
             position: absolute;
             z-index: 1; }
+          #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide iframe {
+            margin-left: 25px; }
     #page-wrapper-wrapper #page-wrapper header#featured-tag-wrapper {
       background-color: rgba(0, 0, 0, 0.8);
       border-bottom: 10px solid rgba(100, 0, 0, 0.5);

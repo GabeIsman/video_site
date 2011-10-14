@@ -6,16 +6,18 @@
 #slider-wrapper.grid_16
 	#slider
 		- @featured.each do |video|
-			.slide{ :id => "slide-#{video.id}" }
-				%hgroup
+			%div.slide{ :id => "slide-#{video.id}" }
+				%img{ :id => "image-#{video.id}", :src => "#{video.thumbnail_url}" }
+				%hgroup{ :id => "hgroup-#{video.id}"}
 					%h1
 						= video.title
 					%h2
 						= video.description
-				.gloss
+				%div.gloss{ :id => "gloss-#{video.id}" }
 				%canvas{ :id => "canvas-#{video.id}" }
 				= raw(video.embed_html)
 .clear
 - (1..6).each do |x|
-	.tag-wrapper
+	.tag-wrapper{ :id => "tag-wrapper-#{x}" }
 .clear
+

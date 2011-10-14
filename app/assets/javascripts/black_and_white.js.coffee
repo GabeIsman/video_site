@@ -1,8 +1,20 @@
 $(document).ready ->
+	
+	# click to hide the canvas
+	$('#canvas-3').parent().click ->
+		$('#canvas-3').css
+			'display': 'none'
+		$('#canvas-3').siblings('hgroup').css
+			'display': 'none'
+		$('#canvas-3').siblings('.gloss').css
+			'display': 'none'
 
 	# create a new image object
-	image = new Image()
-	image.src = "cropped-asian-hipster.jpg"
+	# image = new Image()
+	# image.src = "cropped-asian-hipster.jpg"
+	image = document.getElementById( "image-3" )
+	image.width = 460
+	image.height = 380
 	
 	# get the canvas and context, and draw the image
 	canvas = document.getElementById( "canvas-3" )
@@ -27,15 +39,11 @@ $(document).ready ->
 	context.putImageData(imageData, 0, 0);
 	
 	# hover toggle the black and white filter
-	$('#canvas-3').mouseenter ->
+	$('#canvas-3').siblings().mouseenter ->
 		context.drawImage( image, 0, 0 )
-	$('#cavas-3').mouseout ->
+	$('#canvas-3').siblings().mouseout ->
 		context.putImageData(imageData, 0, 0);
 		
-	# click to hide the canvas
-	$('.gloss').click ->
-		$('#canvas-3').css
-		'display': 'none'
-	$('#canvas-3').click ->
-		$('#canvas-3').css
-			'display': 'none'
+
+	
+
