@@ -1,0 +1,5 @@
+= form_tag( "/tag/update_homepage", :method => "post" ) do
+  - @tags.each do |tag|
+    = label_tag tag.id, tag.name
+    = text_field_tag tag.id,"", :size => 1, :maxlength => 1
+  = submit_tag "Update"
