@@ -116,8 +116,7 @@ body {
           #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide img {
             width: 460px;
             height: 380px;
-            position: absolute;
-            display: none; }
+            position: absolute; }
           #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide .gloss {
             background-color: rgba(0, 0, 0, 0.5);
             position: absolute;
