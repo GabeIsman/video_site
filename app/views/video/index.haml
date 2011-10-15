@@ -17,20 +17,20 @@
 				%canvas{ :id => "canvas-#{video.id}" }
 				= video.embed_html.html_safe
 .clear
-- @important_tags.each do |tag|
-	.tag-wrapper{ :id => "tag-wrapper-#{tag.id}" }
-		%header.tag-header
-			%hgroup
-				%h1
-					=tag.name
-		%ul
-			- tag.videos.each do |video|
-				%li
-					%a{ :href => ""}
-						%img{ :src => "#{video.thumbnail_url}" }
-					%hgroup
-						%h1
-							%a{ :href => "" }
-								=video.title
+/- @important_tags.each do |tag|
+/	.tag-wrapper{ :id => "tag-wrapper-#{tag.id}" }
+/		%header.tag-header
+/			%hgroup
+/				%h1
+/					=tag.name
+/		%ul
+/			- tag.videos.each do |video|
+/				%li
+/					%a{ :href => ""}
+/						%img{ :src => "#{video.thumbnail_url}" }
+/					%hgroup
+/						%h1
+/							%a{ :href => "" }
+/								=video.title
 .clear
 
