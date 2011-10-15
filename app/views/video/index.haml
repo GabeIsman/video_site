@@ -8,7 +8,7 @@
 		- @featured.each do |video|
 			%div.slide{ :id => "slide-#{video.id}" }
 				- img_src = ActiveSupport::Base64.encode64(open(video.big_thumbnail_url){ |io| io.read })
-				%img{ :src => "#{img_src}"}
+				%img{ :src => "data:image/jpg;base64,#{img_src}"}
 				/%img{ :id => "image-#{video.id}", :src => "#{video.big_thumbnail_url}" }
 				%hgroup{ :id => "hgroup-#{video.id}"}
 					%h1

@@ -49,12 +49,12 @@ $(document).ready ->
 				'display': 'none'
 				
 		image = $(canvas).siblings('img').get(0)
-					
+		
 		# get the canvas and context, and draw the image
 		context = canvas.getContext( "2d" )
-		canvas.width = img.width
-		canvas.height = img.height
-		context.drawImage( img, 0, 0 )
+		canvas.width = image.width
+		canvas.height = image.height
+		context.drawImage( image, 0, 0 )
 
 		# get the image data
 		imageData = context.getImageData( 0, 0, canvas.width, canvas.height )
