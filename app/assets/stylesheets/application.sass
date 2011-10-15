@@ -104,12 +104,13 @@ body
 			border-top-left-radius: 20px
 			border-bottom-left-radius: 20px
 			border-bottom-right-radius: 20px
-			height: 475px
+			height: 525px
 			#slider
 				background-color: black
 				border-radius: 25px
+				float: left
 				margin-top: 25px
-				margin-left: 200px
+				margin-left: 110px
 				overflow: hidden
 				width: $slide-width + 60
 				height: $slide-height + 65
@@ -118,7 +119,7 @@ body
 					margin-left: 30px
 					padding-top: 32px
 					position: relative
-					width: $slide-width - 7
+					width: $slide-width
 					height: $slide-height
 					img
 						width: 460px
@@ -156,6 +157,63 @@ body
 						z-index: 1
 					object
 						margin-left: 25px
+			.control
+				cursor: pointer
+				float: left
+				margin-top: 150px
+				width: 0
+				height 0
+			#left-control
+				border-bottom: 100px solid transparent
+				border-top: 100px solid transparent
+				border-right: 40px solid rgba(255,255,255,1)
+				margin-left: 50px
+			#right-control
+				border-bottom: 100px solid transparent
+				border-top: 100px solid transparent
+				border-left: 40px solid rgba(255,255,255,1)
+				margin-left: 110px
+			#dots-wrapper
+				//background-color: rgba(255,255,255,1)
+				margin: 25px auto
+				width: 240px
+				height: 25px
+				#pause-button
+					border-right: 3px solid white
+					border-left: 3px solid white
+					cursor: pointer
+					float: left
+					margin: 4px 0 0 20px
+					width: 9px
+					height: 15px
+					
+				#play-button
+					border-bottom: 8px solid transparent
+					border-top: 8px solid transparent
+					border-left: 8px solid rgba(255,255,255,1)
+					cursor: pointer
+					float: left
+					margin-top: 4px
+					margin-left: 12.5px
+					margin-right: 30px
+				#dots
+					float: left
+					margin: 0 auto
+					width: 140px
+					.dot:first-child
+						margin-left: 12.5px
+					.dot
+						background-color: transparent
+						border: 1px solid white
+						float: left
+						margin-top: 4px
+						margin-left: 34px
+						width: 14px
+						height: 14px
+					#current-dot
+						background-color: rgb(100,0,0)
+				
+			
 			
 		header#featured-tag-wrapper
 			background-color: rgba(0,0,0,.8)

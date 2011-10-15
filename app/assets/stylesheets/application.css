@@ -97,12 +97,13 @@ body {
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
-      height: 475px; }
+      height: 525px; }
       #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider {
         background-color: black;
         border-radius: 25px;
+        float: left;
         margin-top: 25px;
-        margin-left: 200px;
+        margin-left: 110px;
         overflow: hidden;
         width: 540px;
         height: 425px; }
@@ -111,7 +112,7 @@ body {
           margin-left: 30px;
           padding-top: 32px;
           position: relative;
-          width: 473px;
+          width: 480px;
           height: 360px; }
           #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide img {
             width: 460px;
@@ -149,6 +150,58 @@ body {
             z-index: 1; }
           #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide object {
             margin-left: 25px; }
+      #page-wrapper-wrapper #page-wrapper #slider-wrapper .control {
+        cursor: pointer;
+        float: left;
+        margin-top: 150px;
+        width: 0; }
+      #page-wrapper-wrapper #page-wrapper #slider-wrapper #left-control {
+        border-bottom: 100px solid transparent;
+        border-top: 100px solid transparent;
+        border-right: 40px solid white;
+        margin-left: 50px; }
+      #page-wrapper-wrapper #page-wrapper #slider-wrapper #right-control {
+        border-bottom: 100px solid transparent;
+        border-top: 100px solid transparent;
+        border-left: 40px solid white;
+        margin-left: 110px; }
+      #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper {
+        margin: 25px auto;
+        width: 240px;
+        height: 25px; }
+        #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #pause-button {
+          border-right: 3px solid white;
+          border-left: 3px solid white;
+          cursor: pointer;
+          float: left;
+          margin: 4px 0 0 20px;
+          width: 9px;
+          height: 15px; }
+        #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #play-button {
+          border-bottom: 8px solid transparent;
+          border-top: 8px solid transparent;
+          border-left: 8px solid white;
+          cursor: pointer;
+          float: left;
+          margin-top: 4px;
+          margin-left: 12.5px;
+          margin-right: 30px; }
+        #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #dots {
+          float: left;
+          margin: 0 auto;
+          width: 140px; }
+          #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #dots .dot:first-child {
+            margin-left: 12.5px; }
+          #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #dots .dot {
+            background-color: transparent;
+            border: 1px solid white;
+            float: left;
+            margin-top: 4px;
+            margin-left: 34px;
+            width: 14px;
+            height: 14px; }
+          #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #dots #current-dot {
+            background-color: #640000; }
     #page-wrapper-wrapper #page-wrapper header#featured-tag-wrapper {
       background-color: rgba(0, 0, 0, 0.8);
       border-bottom: 10px solid rgba(100, 0, 0, 0.5);

@@ -1,57 +1,23 @@
 $(document).ready ->
 
-	# THE SLIDER
-	slider = $("#slider")
-	slide_width = 503
-	slides = $(".slide")
-	number_of_slides = slides.length
-	current_position = 1
-
+	$('.slide').click ->
+		$(this).children('canvas').css
+			'display': 'none'
+		$(this).children('hgroup').css
+			'display': 'none'
+		$(this).children('.gloss').css
+			'display': 'none'	
 	
-	slides.wrapAll('<div id="slide-inner"></div>')
-	$('#slide-inner').css
-		'width': number_of_slides * slide_width
-	
-	automate_callback = ( current_position ) ->
-		automate( current_position )
-	
-	automate = ( current_position ) ->
-		$('#slide-inner').animate
-			'marginLeft': -( slide_width * current_position )
-			1000
-		if current_position < number_of_slides - 1
-			current_position += 1
-		else
-			current_position = 0
-		setTimeout( =>
-			automate( current_position )
-		,5000 )	
-								
-	setTimeout( =>
-		automate( current_position )
-	,5000)
-
-
-
-
-
-
-
 	canvases = $('.slider-canvas')
-	
+	contexts = new Array()
+	counter = 0
 	for canvas in canvases
-		$(canvas).parent().click ->
-			$(canvas).css
-				'display': 'none'
-			$(canvas).siblings('hgroup').css
-				'display': 'none'
-			$(canvas).siblings('gloss').css
-				'display': 'none'
-				
-		image = $(canvas).siblings('img').get(0)
-		
+						
+		image = $(canvas).siblings('img').get(0)		
+	
 		# get the canvas and context, and draw the image
-		context = canvas.getContext( "2d" )
+		contexts[counter] = canvas.getContext( "2d" )
+		context = contexts[counter]
 		canvas.width = image.width
 		canvas.height = image.height
 		context.drawImage( image, 0, 0 )
@@ -70,14 +36,16 @@ $(document).ready ->
 
 		# apply the black and white filter
 		context.putImageData(imageData, 0, 0);
-
-				
-				
-		# hover toggle the black and white filter
+		
+		# incriment the counter for the indexing of contexts
+		counter++
+		
+		# hover toggle the black and white filter		
 		$(canvas).siblings().mouseenter ->
-			context.drawImage( image, 0, 0 )
+			contexts[counter].drawImage( image, 0, 0 )
 		$(canvas).siblings().mouseout ->
-			context.putImageData(imageData, 0, 0);
+			contexts[counter].putImageData(imageData, 0, 0);
+		counter++
 		
 
 	
