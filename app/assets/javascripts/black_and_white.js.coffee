@@ -10,20 +10,26 @@ $(document).ready ->
 	
 	canvases = $('.slider-canvas')
 	contexts = new Array()
+	imageDatas = new Array()
+	images = new Array()
 	counter = 0
-	for canvas in canvases
+	
+	
+	for something in canvases
 						
-		image = $(canvas).siblings('img').get(0)		
+		images[counter] = $(something).siblings('img').get(0)
+		image = images[counter]
 	
 		# get the canvas and context, and draw the image
-		contexts[counter] = canvas.getContext( "2d" )
+		contexts[counter] = something.getContext( "2d" )
 		context = contexts[counter]
-		canvas.width = image.width
-		canvas.height = image.height
+		something.width = image.width
+		something.height = image.height
 		context.drawImage( image, 0, 0 )
 
 		# get the image data
-		imageData = context.getImageData( 0, 0, canvas.width, canvas.height )
+		imageDatas[counter] = context.getImageData( 0, 0, something.width, something.height )
+		imageData = imageDatas[counter]
 		data = imageData.data
 
 		# create the black and white filter
@@ -36,17 +42,48 @@ $(document).ready ->
 
 		# apply the black and white filter
 		context.putImageData(imageData, 0, 0);
-		
-		# incriment the counter for the indexing of contexts
+				
+		# incriment the counter
 		counter++
 		
-		# hover toggle the black and white filter		
-		$(canvas).siblings().mouseenter ->
-			contexts[counter].drawImage( image, 0, 0 )
-		$(canvas).siblings().mouseout ->
-			contexts[counter].putImageData(imageData, 0, 0);
-		counter++
-		
-
-	
-
+	###		
+	for i in [0..canvases.length] by 1
+		$canvas[i].parent().mouseenter ->
+			image = images[i]
+			context = contexts[i]
+			context.drawImage( image, 0, 0 )
+		$canvas[i].parent().mouseout ->
+			imageData = imageDatas[x]
+			context = contexts[i]
+			context.putImageData( imageData, 0, 0 )
+	###
+	$(canvases[0]).parent().mouseenter ->
+		x = 0
+		image = images[x]
+		context = contexts[x]
+		context.drawImage( image, 0, 0 )
+	$(canvases[0]).parent().mouseout ->
+		x = 0
+		imageData = imageDatas[x]
+		context = contexts[x]
+		context.putImageData( imageData, 0, 0 )
+	$(canvases[1]).siblings().mouseenter ->
+		x = 1
+		image = images[x]
+		context = contexts[x]
+		context.drawImage( image, 0, 0)
+	$(canvases[1]).siblings().mouseout ->
+		x = 1
+		imageData = imageDatas[x]
+		context = contexts[x]
+		context.putImageData( imageData, 0, 0 )
+	$(canvases[2]).siblings().mouseenter ->
+		x = 2
+		image = images[x]
+		context = contexts[x]
+		context.drawImage( image, 0, 0 )
+	$(canvases[2]).siblings().mouseout ->
+		x = 2
+		imageData = imageDatas[x]
+		context = contexts[x]
+		context.putImageData( imageData, 0, 0 )	
