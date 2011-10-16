@@ -12,8 +12,7 @@ $(document).ready ->
 	contexts = new Array()
 	imageDatas = new Array()
 	images = new Array()
-	counter = 0
-	
+	counter = 0	
 	
 	for something in canvases
 						
@@ -46,44 +45,11 @@ $(document).ready ->
 		# incriment the counter
 		counter++
 		
-	###		
-	for i in [0..canvases.length] by 1
-		$canvas[i].parent().mouseenter ->
-			image = images[i]
-			context = contexts[i]
-			context.drawImage( image, 0, 0 )
-		$canvas[i].parent().mouseout ->
-			imageData = imageDatas[x]
-			context = contexts[i]
-			context.putImageData( imageData, 0, 0 )
-	###
-	$(canvases[0]).parent().mouseenter ->
-		x = 0
-		image = images[x]
-		context = contexts[x]
-		context.drawImage( image, 0, 0 )
-	$(canvases[0]).parent().mouseout ->
-		x = 0
+	# remove filter on mouseover
+	$('.slide-cover').mouseenter ->
+		x = $('.slide-cover').index(this)
+		contexts[x].drawImage( images[x], 0, 0 )
+	$('.slide-cover').mouseout ->
+		x = $('.slide-cover').index(this)
 		imageData = imageDatas[x]
-		context = contexts[x]
-		context.putImageData( imageData, 0, 0 )
-	$(canvases[1]).siblings().mouseenter ->
-		x = 1
-		image = images[x]
-		context = contexts[x]
-		context.drawImage( image, 0, 0)
-	$(canvases[1]).siblings().mouseout ->
-		x = 1
-		imageData = imageDatas[x]
-		context = contexts[x]
-		context.putImageData( imageData, 0, 0 )
-	$(canvases[2]).siblings().mouseenter ->
-		x = 2
-		image = images[x]
-		context = contexts[x]
-		context.drawImage( image, 0, 0 )
-	$(canvases[2]).siblings().mouseout ->
-		x = 2
-		imageData = imageDatas[x]
-		context = contexts[x]
-		context.putImageData( imageData, 0, 0 )	
+		contexts[x].putImageData( imageData, 0, 0 )

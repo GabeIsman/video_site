@@ -58,11 +58,13 @@ $ ->
 			clearTimeout( t )
 		$('.control').click ->
 			clearTimeout( t )
+		$('.dot').click ->
+			clearTimeout( t )
 			
 	# left control functions
 	$('#left-control').mousedown ->
 		$(this).css
-			'border-right': '40px solid rgba(255,255,255,.5)'
+			'border-right': '40px solid rgba(100,0,0,.5)'
 	$('#left-control').mouseup ->
 		$(this).css
 			'border-right': '40px solid rgba(255,255,255,1)'
@@ -75,7 +77,7 @@ $ ->
 	# right control functions	
 	$('#right-control').mousedown ->
 		$(this).css
-			'border-left': '40px solid rgba(255,255,255,.5)'
+			'border-left': '40px solid rgba(100,0,0,.5)'
 	$('#right-control').mouseup ->
 		$(this).css
 			'border-left': '40px solid rgba(255,255,255,1)'
@@ -84,6 +86,13 @@ $ ->
 		current_position = manage_position( current_position )
 		current_position = slide( current_position )
 		color_dots( current_position)
+		
+	# dot control functions
+	$('.dot').click ->
+		current_position = $('.dot').index(this)
+		current_position = slide( current_position )
+		color_dots( current_position )
+		
 
 
 	# MAIN PROGRAM
@@ -104,4 +113,6 @@ $ ->
 	$('.slide').click ->
 		clearTimeout( t )
 	$('.control').click ->
+		clearTimeout( t )
+	$('.dot').click ->
 		clearTimeout( t )
