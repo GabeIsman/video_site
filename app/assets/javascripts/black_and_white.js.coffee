@@ -1,5 +1,5 @@
 $(document).ready ->
-
+	
 	$('.slide').click ->
 		$(this).children('canvas').css
 			'display': 'none'
