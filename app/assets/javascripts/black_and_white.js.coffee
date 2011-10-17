@@ -6,7 +6,9 @@ $(document).ready ->
 		$(this).children('hgroup').css
 			'display': 'none'
 		$(this).children('.gloss').css
-			'display': 'none'	
+			'display': 'none'
+		$(this).children('.slide-cover').css
+			'display': 'none'
 	
 	canvases = $('.slider-canvas')
 	contexts = new Array()

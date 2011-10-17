@@ -227,22 +227,24 @@ body {
           font-weight: 400;
           text-align: center;
           line-height: 50px; }
-      #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li {
-        margin-bottom: 25px; }
-        #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h1 {
-          color: #c8c8c8;
-          font-family: "helvetica neue";
-          font-size: 20px;
-          margin-right: 20px;
-          text-align: right; }
-        #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h2 {
-          color: #c8c8c8;
-          font-family: "helvetica neue";
-          font-size: 12px;
-          font-weight: 300;
-          margin: 10px; }
-        #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li img {
-          border: 5px solid black;
-          border-radius: 10px;
-          float: left;
-          margin: 5px 10px; }
+      #page-wrapper-wrapper #page-wrapper .tag-wrapper ul {
+        margin-top: 10px; }
+        #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li {
+          margin-bottom: 60px; }
+          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h1 {
+            color: #c8c8c8;
+            font-family: "helvetica neue";
+            font-size: 20px;
+            margin-right: 20px;
+            text-align: right; }
+          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h2 {
+            color: #c8c8c8;
+            font-family: "helvetica neue";
+            font-size: 12px;
+            font-weight: 300;
+            margin: 10px; }
+          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li img {
+            border: 5px solid black;
+            border-radius: 10px;
+            float: left;
+            margin: 5px 10px; }

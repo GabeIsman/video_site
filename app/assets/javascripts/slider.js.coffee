@@ -31,6 +31,8 @@ $ ->
 		$('#slide-inner').animate
 			'marginLeft': -( slide_width * current_position )
 			1000
+		$('.slide').children('.gloss, .slide-cover, hgroup, .slider-canvas').css
+			'display': 'block'
 		current_position
 		
 	# slide-right
