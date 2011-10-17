@@ -22,11 +22,9 @@
 	#right-control.control
 	.clear
 	#dots-wrapper
-		/#play-button
 		#dots
-			- for dot_id in 0...@featured.length
+			- (0...@featured.length).each do |dot_id|
 				.dot{ :id => "#{dot_id}"}
-		/#pause-button
 .clear
 - @important_tags.each do |tag|
 	.tag-wrapper{ :id => "tag-wrapper-#{tag.id}" }

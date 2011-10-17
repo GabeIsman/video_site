@@ -4,10 +4,6 @@ class VideoController < ApplicationController
     @important_tags = Tag.where("homepage > 0")
   end
 
-  def tags
-    
-  end
-
   def all
     @videos = Video.all
   end
