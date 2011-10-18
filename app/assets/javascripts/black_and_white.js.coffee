@@ -1,4 +1,4 @@
-$(document).ready ->
+$(window).load ->
 	
 	$('.slide').click ->
 		$(this).children('canvas').css
@@ -20,10 +20,10 @@ $(document).ready ->
 						
 		images[counter] = $(something).siblings('img').get(0)
 		image = images[counter]
-	
+
 		# get the canvas and context, and draw the image
 		contexts[counter] = something.getContext( "2d" )
-		context = contexts[counter]
+		context = contexts[counter]		
 		something.width = image.width
 		something.height = image.height
 		context.drawImage( image, 0, 0 )
