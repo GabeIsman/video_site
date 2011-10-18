@@ -1,1 +1,4 @@
 = render :partial => 'video_data', :object => @video, :as => :video
+%h1
+  Related Videos
+= render :partial => 'thumbnail', :collection => @video.related_videos, :as => :video
