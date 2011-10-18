@@ -3,15 +3,14 @@ class TagController < ApplicationController
     @tags = Tag.all
   end
 
-  def list
+  def view
     tag_name = params[:id] || ""
-    tag = Tag.find_by_name(tag_name.titleize.downcase)
-    if !tag
+    @tag = Tag.find_by_name(tag_name.titleize.downcase)
+    if !@tag
       flash[:error] = "Tag not found."
       return redirect_to :controller => :tag, :action => :index
     end
-    @videos = tag.videos
-    render '/video/all'
+    render '/tag/view'
   end
 
   def update_homepage

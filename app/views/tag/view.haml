@@ -1,0 +1,4 @@
+%h1
+  = @tag.name
+%div
+  = render :partial => '/video/thumbnail', :collection => @tag.videos, :as => :video
