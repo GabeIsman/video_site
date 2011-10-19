@@ -2,7 +2,7 @@
   %h1
     = video.title
   %p
-    = raw video.description
+    = auto_link video.description
   %br
   %p 
     = video.tags.map{|t| link_to t.name, "/tag/view/#{t.name.gsub(' ', '_')}" }.join(", ").html_safe
