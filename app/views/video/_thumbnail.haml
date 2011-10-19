@@ -1,5 +1,7 @@
-%div
-  %img{:src => video.thumbnail_url}
-  = video.title
-  = video.description
+%a{ :href => "/video/view/#{video.id}" }
+  %div{ :style => "float: left; margin: 10px 10px 10px 40px; width: 400px" }
+    %img{:src => video.thumbnail_url, :style => "float: left; margin-right: 15px"}
+    %h1
+      = video.title
+    = truncate( video.description, :length => 70, :separator => ' ' )
     

@@ -32,17 +32,17 @@
     %header.tag-header
       %hgroup
         %h1
-          =tag.name
+          = link_to tag.name, { :controller => :tag, :action => :view, 
+                                :id => "#{tag.name.gsub( " ", "_" )}" }
     %ul
       - tag.homepage_videos( already_displayed_ids ).each do |video|
         - already_displayed_ids << video.id
         %li
-          %a{ :href => ""}
+          %a{ :href => "/video/view/#{video.id}"}
             %img{ :src => "#{video.thumbnail_url}" }
           %hgroup
             %h1
-              %a{ :href => "" }
-                =video.title
+              = link_to video.title, {:controller => :video, :action => :view, :id => video.id }
       .clear
     .clear
 .clear
