@@ -21,6 +21,7 @@ gem 'sass'
 gem 'coffee-script'
 gem 'youtube_it'
 gem 'daemons'
+gem 'rails_autolink'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
