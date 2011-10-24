@@ -169,14 +169,12 @@ body {
         margin-left: 110px; }
       #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper {
         margin: 25px auto;
-        width: 140px;
         height: 25px; }
         #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #dots {
           float: left;
-          margin: 0 auto;
-          width: 140px; }
+          margin: 0 auto; }
           #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #dots .dot:first-child {
-            margin-left: 12.5px; }
+            margin-left: 0; }
           #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #dots .dot {
             background-color: transparent;
             border: 1px solid white;

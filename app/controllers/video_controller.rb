@@ -1,6 +1,7 @@
 class VideoController < ApplicationController
   def index
-    @featured = Video.limit(3)
+    @featured = Video.limit(5)
+    @popular = Video.limit(3)
     @important_tags = Tag.where("homepage > 0")
   end
 

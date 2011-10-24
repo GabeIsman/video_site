@@ -90,6 +90,8 @@ $ ->
 		color_dots( current_position)
 		
 	# dot control functions
+	$('#dots-wrapper').css
+		'width': (dots.length * 50) - 34
 	$('.dot').click ->
 		current_position = $('.dot').index(this)
 		current_position = slide( current_position )
