@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 %html
-  %head
-    %title
-      Videos.Oberlin
-    = stylesheet_link_tag "reset", "960", "application"
-    = javascript_include_tag "jquery", "application"
-    = csrf_meta_tags
-  %body
-    #body-wrapper
-      %header#preheader-band
-      #page-wrapper-wrapper.container_16
-        #page-wrapper.container_16
-          %nav#top.grid_16
-            %ul
-              %a{ :href => "http://oberlin.edu" }  
-                %li
-                  oberlin
-              %a{ :href => "/" }  
-                %li
-                  home
-              %li
-                tags
-            %form#search-form-wrapper
-              %input#search-form{ :value => "search" }
-              %input#go-button{ :type => "submit", :value => "submit" }
-          .clear
-          = yield
+	%head
+		%title
+			Videos.Oberlin
+		= stylesheet_link_tag "reset", "960", "application"
+		= javascript_include_tag "jquery", "application"
+		= csrf_meta_tags
+	%body
+		#body-wrapper
+			%header#preheader-band
+			#page-wrapper-wrapper.container_16
+				#page-wrapper.container_16
+					%nav#top.container_16
+						%hgroup
+							%h1
+								= link_to "Oberlin Videos", :root
+						%form#search-form-wrapper
+							%input#search-form{ :value => "search" }
+							%input#go-button{ :type => "submit", :value => "" }
+						%ul
+							%a{ :href => "http://oberlin.edu" }	 
+								%li
+									oberlin
+							%a{ :href => "/" }	
+								%li
+									home
+							%a{ :href => "/"}
+								%li
+									tags
+					.clear
+					= yield
