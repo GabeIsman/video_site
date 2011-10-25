@@ -5,8 +5,14 @@ class VideoController < ApplicationController
     @important_tags = Tag.where("homepage > 0")
   end
 
+	def search
+    @search = Video.search do
+			keywords( params[:search] )
+		end
+	end
+
   def all
-    @videos = Video.all
+		@videos = Video.all
   end
 
   def view
