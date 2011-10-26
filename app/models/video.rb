@@ -2,6 +2,12 @@ class Video < ActiveRecord::Base
   has_and_belongs_to_many :tags
 	NUM_RELATED_VIDEOS = 5
 
+	searchable do
+		text :title, :default_boost => 4
+		text :tags, :default_boost => 2
+		text :description
+	end
+
 	# TODO this could be better/faster
 	def related_videos
 		related_videos = {}

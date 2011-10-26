@@ -14,7 +14,7 @@ $ ->
 	# current position dots
 	color_dots = ( current_position ) ->
 		$(dots[current_position]).css
-			'background-color': 'rgb(100,0,0)'
+			'background-color': 'rgb(50,0,0)'
 		for dot in dots
 			unless dot == dots[current_position]
 				$(dot).css
@@ -66,10 +66,10 @@ $ ->
 	# left control functions
 	$('#left-control').mousedown ->
 		$(this).css
-			'border-right': '40px solid rgba(100,0,0,.5)'
+			'border-right': '40px solid rgb(50,0,0)'
 	$('#left-control').mouseup ->
 		$(this).css
-			'border-right': '40px solid rgba(255,255,255,1)'
+			'border-right': '40px solid rgb(255,255,255)'
 	$('#left-control').click ->
 		current_position -= 1
 		current_position = manage_position( current_position )
@@ -79,10 +79,10 @@ $ ->
 	# right control functions	
 	$('#right-control').mousedown ->
 		$(this).css
-			'border-left': '40px solid rgba(100,0,0,.5)'
+			'border-left': '40px solid rgb(50,0,0)'
 	$('#right-control').mouseup ->
 		$(this).css
-			'border-left': '40px solid rgba(255,255,255,1)'
+			'border-left': '40px solid rgb(255,255,255)'
 	$('#right-control').click ->
 		current_position += 1
 		current_position = manage_position( current_position )

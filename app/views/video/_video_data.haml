@@ -6,5 +6,5 @@
   %br
   %p 
     = video.tags.map{|t| link_to t.name, "/tag/view/#{t.name.gsub(' ', '_')}" }.join(", ").html_safe
-  = video.embed_html.html_safe
+  = render :partial => 'embed', :object => video
 

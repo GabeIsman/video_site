@@ -15,10 +15,9 @@
 						%hgroup
 							%h1
 								= link_to "Oberlin Videos", :root
-						%form#search-form-wrapper
-							%input#search-form{ :value => "search" }
-							%input#go-button{ :type => "submit", :value => "" }
-						
+						= form_tag '/video/search' , :method => :get, :id => "search-form-wrapper"  do
+							= text_field_tag "search", params[:search] || "search", :id => "search-form"
+							= submit_tag "", :id => "go-button", :name => nil
 						%ul
 							- counter = 1
 							- links = { :browse => '#', :home => '/', :tags => '', :lucky => '' }

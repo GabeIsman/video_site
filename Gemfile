@@ -22,6 +22,7 @@ gem 'coffee-script'
 gem 'youtube_it'
 gem 'daemons'
 gem 'rails_autolink'
+gem 'sunspot_rails'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
