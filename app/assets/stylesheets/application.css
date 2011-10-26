@@ -14,12 +14,13 @@ body #body-wrapper header#preheader-band {
 #page-wrapper-wrapper {
   background-color: rgba(0, 0, 0, 0.25); }
   #page-wrapper-wrapper #page-wrapper {
+    background-image: url("body-wrapper-bg.png");
     padding-bottom: 90px; }
     #page-wrapper-wrapper #page-wrapper nav#top li,
     #page-wrapper-wrapper #page-wrapper nav#top input#search-form,
     #page-wrapper-wrapper #page-wrapper nav#top input#go-button {
-      background-color: rgba(0, 0, 0, 0.25);
-      color: white;
+      background-color: white;
+      color: black;
       font-family: "helvetica neue";
       font-size: 12px;
       font-weight: 400; }
@@ -31,7 +32,7 @@ body #body-wrapper header#preheader-band {
         margin-left: 10px;
         width: 470px; }
         #page-wrapper-wrapper #page-wrapper nav#top hgroup h1 {
-          color: white;
+          color: #320000;
           font-family: "helvetica neue";
           font-size: 68px;
           font-weight: 100;
@@ -40,20 +41,42 @@ body #body-wrapper header#preheader-band {
       #page-wrapper-wrapper #page-wrapper nav#top ul {
         float: right;
         margin-right: 10px; }
+        #page-wrapper-wrapper #page-wrapper nav#top ul li:hover {
+          background-color: #320000; }
         #page-wrapper-wrapper #page-wrapper nav#top ul li {
           background-color: rgba(0, 0, 0, 0.15);
-          float: left;
+          color: white;
+          cursor: pointer;
+          display: block;
+          float: right;
+          font-weight: 100;
+          font-size: 25px;
           text-align: center;
-          line-height: 25px;
+          text-transform: uppercase;
+          line-height: 50px;
           margin-left: 10px;
           width: 227.5px;
           height: 50px; }
+          #page-wrapper-wrapper #page-wrapper nav#top ul li ul {
+            background-color: #320000;
+            display: none;
+            right: 10;
+            position: absolute;
+            width: 227.5px;
+            z-index: 10; }
+            #page-wrapper-wrapper #page-wrapper nav#top ul li ul li {
+              text-transform: lowercase;
+              font-size: 15px; }
+        #page-wrapper-wrapper #page-wrapper nav#top ul li#banner-tab-1 {
+          background-color: #320000; }
       #page-wrapper-wrapper #page-wrapper nav#top form#search-form-wrapper {
         height: 50px;
         margin-top: 15px; }
         #page-wrapper-wrapper #page-wrapper nav#top form#search-form-wrapper input#search-form {
           border: none;
           float: left;
+          font-size: 25px;
+          font-weight: 200;
           line-height: 50px;
           margin-left: 10px;
           padding: 0 10px;
@@ -61,6 +84,7 @@ body #body-wrapper header#preheader-band {
           width: 380px;
           height: 50px; }
         #page-wrapper-wrapper #page-wrapper nav#top form#search-form-wrapper input#go-button {
+          background-color: #320000;
           border: none;
           float: left;
           margin-left: 10px;
@@ -82,14 +106,14 @@ body #body-wrapper header#preheader-band {
         line-height: 50px;
         text-align: center;
         text-transform: uppercase; }
-    #page-wrapper-wrapper #page-wrapper header#header-1 {
+    #page-wrapper-wrapper #page-wrapper header#folder-header-1 {
       background-color: rgba(0, 0, 0, 0.8);
       margin-right: 10px; }
-    #page-wrapper-wrapper #page-wrapper header#header-2 {
+    #page-wrapper-wrapper #page-wrapper header#folder-header-2 {
       background-color: rgba(0, 0, 0, 0.7); }
-    #page-wrapper-wrapper #page-wrapper header#header-3 {
+    #page-wrapper-wrapper #page-wrapper header#folder-header-3 {
       background-color: rgba(0, 0, 0, 0.6); }
-    #page-wrapper-wrapper #page-wrapper header#header-4 {
+    #page-wrapper-wrapper #page-wrapper header#folder-header-4 {
       background-color: rgba(0, 0, 0, 0.5); }
     #page-wrapper-wrapper #page-wrapper #slider-wrapper {
       background-color: rgba(0, 0, 0, 0.8);

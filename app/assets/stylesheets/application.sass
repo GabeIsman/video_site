@@ -19,8 +19,10 @@ body
 
 #page-wrapper-wrapper
 	background-color: rgba(0,0,0,.25)
+	//background-color: rgb(100,100,100)
 	#page-wrapper
 		//background-image: url('bg.png')
+		background-image: url('body-wrapper-bg.png')
 		padding-bottom: 90px
 		
 		$nav-height: 80px
@@ -28,12 +30,11 @@ body
 		nav#top li,
 		nav#top input#search-form,
 		nav#top input#go-button
-			background-color: rgba(0,0,0,.25)
-			color: white
+			background-color: white
+			color: black
 			font-family: "helvetica neue"
 			font-size: 12px
 			font-weight: 400
-
 		nav#top
 			background-color: rgba(0,0,0,.15)
 			//background-image: url('body-wrapper-bg.png')
@@ -46,7 +47,7 @@ body
 				margin-left: 10px
 				width: 470px
 				h1
-					color: white
+					color: rgb(50,0,0)
 					font-family: "helvetica neue"
 					font-size: 68px
 					font-weight: 100
@@ -55,22 +56,44 @@ body
 			ul
 				float: right
 				margin-right: 10px
+				li:hover
+					background-color: rgb(50,0,0)
 				li
 					//background: -moz-linear-gradient( top, rgba(50,0,0,.75), rgba(50,0,0,.25) )
 					background-color: rgba(0,0,0,.15)
 					//background-image: url('body-wrapper-bg.png')
-					float: left
+					color: white
+					cursor: pointer
+					display: block
+					float: right
+					font-weight: 100
+					font-size: 25px
 					text-align: center
-					line-height: $button-height
+					text-transform: uppercase
+					line-height: 50px
 					margin-left: 10px
 					width: ($full-width - 50) / 4
 					height: 50px
+					ul				
+						background-color: rgb(50,0,0)
+						display: none
+						right: 10
+						position: absolute
+						width: ($full-width - 50) / 4
+						z-index: 10
+						li
+							text-transform: lowercase
+							font-size: 15px
+				li#banner-tab-1
+					background-color: rgb(50,0,0)
 			form#search-form-wrapper
 				height: 50px
 				margin-top: 15px
 				input#search-form
 					border: none
 					float: left
+					font-size: 25px
+					font-weight: 200
 					line-height: 50px
 					margin-left: 10px
 					padding: 0 10px
@@ -79,6 +102,7 @@ body
 					height: 50px
 				input#go-button
 					//background-image: -moz-linear-gradient( top, rgba(255,255,255,.75), rgba(255,255,255,.25) )
+					background-color: rgb(50,0,0)
 					border: none
 					float: left
 					margin-left: 10px
@@ -103,14 +127,14 @@ body
 					line-height: $primary-header-height
 					text-align: center
 					text-transform: uppercase
-		header#header-1
+		header#folder-header-1
 			background-color: rgba(0,0,0,.8)
 			margin-right: 10px
-		header#header-2
+		header#folder-header-2
 			background-color: rgba(0,0,0,.7)
-		header#header-3
+		header#folder-header-3
 			background-color: rgba(0,0,0,.6)
-		header#header-4
+		header#folder-header-4
 			background-color: rgba(0,0,0,.5)
 
 		$slide-width: 480px
