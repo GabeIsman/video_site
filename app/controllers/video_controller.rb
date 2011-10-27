@@ -34,6 +34,12 @@ class VideoController < ApplicationController
     video.update_attributes!(params[:video])
   end
 
+	# XHR ONLY
+	def render_video
+		video = find_video(params[:id])
+		return render :partial => 'slider_embed', :object => video
+	end
+
   private
   
   def populate_instance_variables

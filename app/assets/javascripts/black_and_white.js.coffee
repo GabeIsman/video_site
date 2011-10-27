@@ -1,6 +1,11 @@
 $(window).load ->
 	
 	$('.slide').click ->
+		slide = $(this)
+		$.get( '/video/render_video', { 'id' : slide.attr('video_id') }, (data) ->
+			slide.children('.video-container').html(data)
+		)
+			
 		$(this).children('canvas').css
 			'display': 'none'
 		$(this).children('hgroup').css
