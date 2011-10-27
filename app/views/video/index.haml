@@ -1,8 +1,10 @@
 = render :partial => 'slider'
 
 - already_displayed_ids = []
-- @important_tags.each do |tag|
-	.tag-wrapper{ :id => "tag-wrapper-#{tag.id}" }
+- @important_tags.each_with_index do |tag, index|
+	- classname = "odd"
+	- classname = "even" if index % 2 == 0
+	.tag-wrapper{ :id => "tag-wrapper-#{tag.id}", :class => "#{classname}" }
 		%header.tag-header
 			%hgroup
 				%h1
@@ -16,7 +18,7 @@
 						%img{ :src => "#{video.thumbnail_url}" }
 					%hgroup
 						%h1
-							= link_to video.title, {:controller => :video, :action => :view, :id => video.id }
+							= link_to video.title, { :controller => :video, :action => :view, :id => video.id }
 			.clear
 		.clear
 .clear

@@ -1,5 +1,16 @@
 $full-width: 960px
 
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li
+	font-family: "helvetica neue"
+	font-weight: 100
+
 li
 	list-style-type: none
 a
@@ -48,9 +59,7 @@ body
 				width: 470px
 				h1
 					color: rgb(50,0,0)
-					font-family: "helvetica neue"
 					font-size: 68px
-					font-weight: 100
 					line-height: $nav-height
 					text-align: left
 			ul
@@ -121,9 +130,7 @@ body
 			hgroup
 				h1
 					color: rgba(255,255,255,1)
-					font-family: "helvetica neue"
 					font-size: 25px
-					font-weight: 100
 					letter-spacing: 1px
 					line-height: $primary-header-height
 					text-align: center
@@ -192,13 +199,11 @@ body
 						z-index: 3
 						h1
 							color: white
-							font-family: "helvetica neue"
 							font-size: 40px
 							font-weight: 800
 							line-height: 40px
 						h2
 							color: white
-							font-family: "helvetica neue"
 							font-size: 15px
 							font-weight: 300
 							margin-top: 10px
@@ -261,7 +266,6 @@ body
 			hgroup
 				h1
 					color: rgba(255,255,255,1)
-					font-family: "bebas neue"
 					font-size: 40px
 					font-weight: 800
 					line-height: $primary-header-height
@@ -269,30 +273,39 @@ body
 					text-transform: uppercase
 
 		
-		$tag-wrapper-width: 440px
+		$tag-wrapper-width: 450px
+		.even
+			margin-left: 10px
+			margin-right: 0px
+			header.tag-header
+				float: left
+				margin-left: 10px
+		.odd
+			margin-left: 40px
+			margin-right: 0px
+			header.tag-header
+				float: right
+				margin-right: 10px
 		.tag-wrapper
 			background-color: rgba(0,0,0,.8)
 			border-bottom: 10px solid rgb(50,0,0)
-			border-radius: 25px
 			float: left
-			margin-left: 10px
-			margin-top: 40px
+			margin-top: 90px
 			width: $tag-wrapper-width
 			height: 500px
 			header.tag-header
 				background-color: rgb(50,0,0)
-				border-top-left-radius: 25px
-				border-top-right-radius: 25px
 				margin-bottom: 25px
-				width: $tag-wrapper-width
+				margin-top: -50px
+				width: $tag-wrapper-width - 20
 				height: 50px
 				hgroup
 					h1
 						color: rgb(255,255,255)
-						font-family: "helvetica neue"
 						font-size: 25px
-						font-weight: 100
+						letter-spacing: 1px
 						text-align: center
+						text-transform: uppercase
 						line-height: 50px
 			ul
 				margin-top: 10px
@@ -301,13 +314,11 @@ body
 					hgroup
 						h1
 							color: rgb(200,200,200)
-							font-family: "helvetica neue"
 							font-size: 20px
 							margin-right: 20px
 							text-align: right
 						h2
 							color: rgb(200,200,200)
-							font-family: "helvetica neue"
 							font-size: 12px
 							font-weight: 300
 							margin: 10px
