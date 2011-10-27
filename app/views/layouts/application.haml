@@ -19,14 +19,18 @@
 							= text_field_tag "search", params[:search] || "search", :id => "search-form"
 							= submit_tag "", :id => "go-button", :name => nil
 						%ul
-							%a{ :href => "http://oberlin.edu" }	 
-								%li
-									oberlin
-							%a{ :href => "/" }	
-								%li
-									home
-							%a{ :href => "/"}
-								%li
-									tags
+							- counter = 1
+							- links = { :browse => '#', :home => '/', :tags => '', :lucky => '' }
+							- links.each do |key, value|
+								%li{ :id => "banner-tab-#{counter}" }
+									= link_to "#{key}", value if key != :browse
+									- if key == :browse
+										browse
+										%ul
+											- @important_tags.each do |tag|
+												%li
+													= link_to "#{tag.name}", "/tag/view/#{tag}"
+									- counter += 1
+								
 					.clear
 					= yield

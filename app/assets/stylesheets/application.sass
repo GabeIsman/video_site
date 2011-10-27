@@ -19,8 +19,10 @@ body
 
 #page-wrapper-wrapper
 	background-color: rgba(0,0,0,.25)
+	//background-color: rgb(100,100,100)
 	#page-wrapper
 		//background-image: url('bg.png')
+		background-image: url('body-wrapper-bg.png')
 		padding-bottom: 90px
 		
 		$nav-height: 80px
@@ -28,12 +30,11 @@ body
 		nav#top li,
 		nav#top input#search-form,
 		nav#top input#go-button
-			background-color: rgba(0,0,0,.25)
-			color: white
+			background-color: white
+			color: black
 			font-family: "helvetica neue"
 			font-size: 12px
 			font-weight: 400
-
 		nav#top
 			background-color: rgba(0,0,0,.15)
 			//background-image: url('body-wrapper-bg.png')
@@ -46,7 +47,7 @@ body
 				margin-left: 10px
 				width: 470px
 				h1
-					color: white
+					color: rgb(50,0,0)
 					font-family: "helvetica neue"
 					font-size: 68px
 					font-weight: 100
@@ -55,35 +56,59 @@ body
 			ul
 				float: right
 				margin-right: 10px
+				li:hover
+					background-color: rgb(50,0,0)
 				li
 					//background: -moz-linear-gradient( top, rgba(50,0,0,.75), rgba(50,0,0,.25) )
 					background-color: rgba(0,0,0,.15)
 					//background-image: url('body-wrapper-bg.png')
-					float: left
+					color: white
+					cursor: pointer
+					display: block
+					float: right
+					font-weight: 100
+					font-size: 25px
 					text-align: center
-					line-height: $button-height
+					text-transform: uppercase
+					line-height: 50px
 					margin-left: 10px
 					width: ($full-width - 50) / 4
 					height: 50px
+					ul				
+						background-color: rgb(50,0,0)
+						display: none
+						right: 10
+						position: absolute
+						width: ($full-width - 50) / 4
+						z-index: 10
+						li
+							text-transform: lowercase
+							font-size: 15px
+				li#banner-tab-1
+					background-color: rgb(50,0,0)
 			form#search-form-wrapper
 				height: 50px
-				margin-top: 15px
+				margin-top: 30px
 				input#search-form
 					border: none
 					float: left
-					line-height: 50px
+					font-size: 15px
+					font-weight: 100
+					line-height: 25px
 					margin-left: 10px
 					padding: 0 10px
 					text-align: left
-					width: 400px - 20
-					height: 50px
+					width: 425px - 20
+					height: 25px
 				input#go-button
 					//background-image: -moz-linear-gradient( top, rgba(255,255,255,.75), rgba(255,255,255,.25) )
+					background-color: rgb(50,0,0)
 					border: none
+					cursor: pointer
 					float: left
 					margin-left: 10px
-					width: 50px
-					height: 50px
+					width: 25px
+					height: 25px
 		
 		$primary-header-height: 50px
 		header.primary-header
@@ -103,23 +128,31 @@ body
 					line-height: $primary-header-height
 					text-align: center
 					text-transform: uppercase
-		header#header-1
+		header#folder-header-1
 			background-color: rgba(0,0,0,.8)
 			margin-right: 10px
-		header#header-2
+		header#folder-header-2
 			background-color: rgba(0,0,0,.7)
-		header#header-3
+		header#folder-header-3
 			background-color: rgba(0,0,0,.6)
-		header#header-4
+		header#folder-header-4
 			background-color: rgba(0,0,0,.5)
 
 		$slide-width: 480px
 		$slide-height: 360px
-		#slider-wrapper
+		#slider-wrapper-1
 			background-color: rgba(0,0,0,.8)
-			border-bottom: 10px solid rgba(100,0,0,.5)
+		#slider-wrapper-2
+			background-color: rgba(0,0,0,.7)
+		#slider-wrapper-3
+			background-color: rgba(0,0,0,.6)
+		#slider-wrapper-4
+			background-color: rgba(0,0,0,.5)
+		.slider-wrapper
+			border-bottom: 10px solid rgb(50,0,0)
+			display: none
 			height: 550px
-			#slider
+			.slider
 				background-color: black
 				float: left
 				margin-top: 50px
@@ -179,25 +212,25 @@ body
 				float: left
 				margin-top: 150px
 				width: 0
-				height 0
-			#left-control
+				height: 0
+			.left-control
 				border-bottom: 100px solid transparent
 				border-top: 100px solid transparent
 				border-right: 40px solid rgba(255,255,255,1)
 				margin-left: 50px
-			#right-control
+			.right-control
 				border-bottom: 100px solid transparent
 				border-top: 100px solid transparent
 				border-left: 40px solid rgba(255,255,255,1)
 				margin-left: 110px
-			#dots-wrapper
-				//background-color: rgba(255,255,255,1)
+			.dots-wrapper
 				margin: 25px auto
-				//width: 140px
 				height: 25px
-				#dots
+				.dots
+					display: block
 					float: left
 					margin: 0 auto
+					position: relative
 					.dot:first-child
 						margin-left: 0
 					.dot
@@ -209,7 +242,10 @@ body
 						width: 14px
 						height: 14px
 					#current-dot
-						background-color: rgb(100,0,0)
+						background-color: rgb(50,0,0)
+		.current
+			display: block
+
 				
 			
 			
@@ -233,18 +269,18 @@ body
 					text-transform: uppercase
 
 		
-		$tag-wrapper-width: 390px
+		$tag-wrapper-width: 440px
 		.tag-wrapper
 			background-color: rgba(0,0,0,.8)
-			border-bottom: 10px solid rgba(100,0,0,.5)
+			border-bottom: 10px solid rgb(50,0,0)
 			border-radius: 25px
 			float: left
-			margin-left: 60px
+			margin-left: 10px
 			margin-top: 40px
 			width: $tag-wrapper-width
 			height: 500px
 			header.tag-header
-				background-color: rgba(100,0,0,.5)
+				background-color: rgb(50,0,0)
 				border-top-left-radius: 25px
 				border-top-right-radius: 25px
 				margin-bottom: 25px
@@ -253,9 +289,9 @@ body
 				hgroup
 					h1
 						color: rgb(255,255,255)
-						font-family: "bebas neue"
-						font-size: 35px
-						font-weight: 400
+						font-family: "helvetica neue"
+						font-size: 25px
+						font-weight: 100
 						text-align: center
 						line-height: 50px
 			ul

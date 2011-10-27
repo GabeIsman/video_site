@@ -1,8 +1,8 @@
 class VideoController < ApplicationController
+  
+  before_filter :populate_instance_variables
+  
   def index
-    @featured = Video.limit(5)
-    @popular = Video.limit(3)
-    @important_tags = Tag.where("homepage > 0")
   end
 
 	def search
@@ -35,6 +35,16 @@ class VideoController < ApplicationController
   end
 
   private
+  
+  def populate_instance_variables
+    #@featured = Tag.find_by_name("featured").videos.limit(5)   
+    @featured = Video.limit(5)
+    @popular = Video.limit(3)
+    @video_catagories = [ @featured, @popular ] 
+    
+    @important_tags = Tag.where("homepage > 0")
+    
+  end
 
   def find_video (id)
     video = Video.find(id) rescue nil

@@ -1,0 +1,7 @@
+- folder_names = [ "Featured", "Popular", "Recent", "Something" ]
+- folder_names.each_with_index do |name, i|
+	%header{ :class => "primary-header", :id => "folder-header-#{i+1}" }
+		%hgroup
+			%h1
+				= name
+.clear
