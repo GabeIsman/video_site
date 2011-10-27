@@ -1,3 +1,12 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+  font-family: "helvetica neue";
+  font-weight: 100; }
+
 li {
   list-style-type: none; }
 
@@ -33,9 +42,7 @@ body #body-wrapper header#preheader-band {
         width: 470px; }
         #page-wrapper-wrapper #page-wrapper nav#top hgroup h1 {
           color: #320000;
-          font-family: "helvetica neue";
           font-size: 68px;
-          font-weight: 100;
           line-height: 80px;
           text-align: left; }
       #page-wrapper-wrapper #page-wrapper nav#top ul {
@@ -100,9 +107,7 @@ body #body-wrapper header#preheader-band {
       height: 50px; }
       #page-wrapper-wrapper #page-wrapper header.primary-header hgroup h1 {
         color: white;
-        font-family: "helvetica neue";
         font-size: 25px;
-        font-weight: 100;
         letter-spacing: 1px;
         line-height: 50px;
         text-align: center;
@@ -168,13 +173,11 @@ body #body-wrapper header#preheader-band {
             z-index: 3; }
             #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide hgroup h1 {
               color: white;
-              font-family: "helvetica neue";
               font-size: 40px;
               font-weight: 800;
               line-height: 40px; }
             #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide hgroup h2 {
               color: white;
-              font-family: "helvetica neue";
               font-size: 15px;
               font-weight: 300;
               margin-top: 10px; }
@@ -232,34 +235,42 @@ body #body-wrapper header#preheader-band {
       height: 50px; }
       #page-wrapper-wrapper #page-wrapper header#featured-tag-wrapper hgroup h1 {
         color: white;
-        font-family: "bebas neue";
         font-size: 40px;
         font-weight: 800;
         line-height: 50px;
         text-align: center;
         text-transform: uppercase; }
+    #page-wrapper-wrapper #page-wrapper .even {
+      margin-left: 10px;
+      margin-right: 0px; }
+      #page-wrapper-wrapper #page-wrapper .even header.tag-header {
+        float: left;
+        margin-left: 10px; }
+    #page-wrapper-wrapper #page-wrapper .odd {
+      margin-left: 40px;
+      margin-right: 0px; }
+      #page-wrapper-wrapper #page-wrapper .odd header.tag-header {
+        float: right;
+        margin-right: 10px; }
     #page-wrapper-wrapper #page-wrapper .tag-wrapper {
       background-color: rgba(0, 0, 0, 0.8);
       border-bottom: 10px solid #320000;
-      border-radius: 25px;
       float: left;
-      margin-left: 10px;
-      margin-top: 40px;
-      width: 440px;
+      margin-top: 90px;
+      width: 450px;
       height: 500px; }
       #page-wrapper-wrapper #page-wrapper .tag-wrapper header.tag-header {
         background-color: #320000;
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
         margin-bottom: 25px;
-        width: 440px;
+        margin-top: -50px;
+        width: 430px;
         height: 50px; }
         #page-wrapper-wrapper #page-wrapper .tag-wrapper header.tag-header hgroup h1 {
           color: white;
-          font-family: "helvetica neue";
           font-size: 25px;
-          font-weight: 100;
+          letter-spacing: 1px;
           text-align: center;
+          text-transform: uppercase;
           line-height: 50px; }
       #page-wrapper-wrapper #page-wrapper .tag-wrapper ul {
         margin-top: 10px; }
@@ -267,13 +278,11 @@ body #body-wrapper header#preheader-band {
           margin-bottom: 60px; }
           #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h1 {
             color: #c8c8c8;
-            font-family: "helvetica neue";
             font-size: 20px;
             margin-right: 20px;
             text-align: right; }
           #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h2 {
             color: #c8c8c8;
-            font-family: "helvetica neue";
             font-size: 12px;
             font-weight: 300;
             margin: 10px; }

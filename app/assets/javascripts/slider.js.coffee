@@ -20,6 +20,20 @@ $ ->
 	$('.current').find('.slide-inner').css
 		'width': number_of_slides * slide_width
 
+	# Color the Dots
+	# Color the curent position dot
+	color_dots = () ->
+		$(dots).css
+			'background-color': 'transparent'
+		$(dots[current_position]).css
+			'background-color': 'rgb(50,0,0)'
+	color_dots()
+
+	# animate on a timer						
+	t = setTimeout( =>
+		automate()
+	,5000)
+
 
 	# LISTENERS AND FUNCTIONS
 	# The How To Slide Functions
@@ -29,7 +43,7 @@ $ ->
 	# then animating the slide-inner div, and then reseting the display
 	# on the every slide's children. Finally, we color the correct dot
 	# and return the current position.
-	slide = ( current_position ) ->
+	slide = () ->
 		current_position = 0 if current_position > number_of_slides - 1
 		current_position = number_of_slides - 1 if current_position < 0	
 		$('.current').find('.slide-inner').animate
@@ -37,119 +51,120 @@ $ ->
 			1000
 		$('.slide').children('.gloss, .slide-cover, hgroup, .slider-canvas').css
 			'display': 'block'
-		color_dots( current_position)
-		current_position
+		color_dots()
 	
 	# Slide Right
 	# Slide right by incrimenting the current position variable and then
 	# calling the slide function
-	slide_right = ( current_position ) ->
+	slide_right = () ->
 		current_position += 1
-		current_position = slide( current_position )
+		slide()
 	
 	# Slide Left
 	# Slide left by deincrimenting the current position variable and then
 	# calling the slide function
-	slide_left = ( current_position ) ->
+	slide_left = () ->
 		current_position -= 1
-		current_position = slide( current_position )
-
+		slide()
 
 
 	# The When To Slide Functions		
 	
 	# The Automate Function
 	# Slide right then wait five seconds before sliding right and calling itself.
-	automate = ( current_position ) ->
-		current_position = slide_right( current_position )
+	automate = () ->
+		console.log "the automate function has been called."
+		console.log "the current position was " + current_position
+		slide_right()
+		console.log "the current position is now " + current_position
 		t = setTimeout( =>
-			automate( current_position )
+			automate()
 		,5000 )
 	
 	# Left Control Listener and Functions
 	# When the left control is clicked, change the color of the button then
-	# slide left. Finally, return the current position.
-	$('.current').children('.left-control').mousedown ->
+	# slide left. Finally, return the current position. Last we clear the timeout.
+	$('.current > .left-control').live "mousedown", ->
 		$(this).css
 			'border-right': '40px solid rgb(50,0,0)'
-	$('.current').children('.left-control').mouseup ->
+	$('.current > .left-control').live "mouseup", ->
 		$(this).css
 			'border-right': '40px solid rgb(255,255,255)'	
-	$('.current').children('left-control').click ->
-		current_position = slide_left( current_position )
-	current_position
+	$('.current > .left-control').live "click", ->
+		console.log "left control has been clicked"
+		clearTimeout( t )
+		console.log "timeout has been cleared"
+		console.log "the current position was " + current_position
+		slide_left()
+		console.log "The current position is now: " + current_position
 
 	# Right Control Listener and Functions
 	# When the right control is clicked, change the color of the button then
-	# slide left. Finally return the current position.
-	$('.current').children('.right-control').mousedown ->
+	# slide right. Finally return the current position. Last we clear the timeout.
+	$('.current > .right-control').live "mousedown", ->
 		$(this).css
 			'border-left': '40px solid rgb(50,0,0)'
-	$('.current').children('.right-control').mouseup ->
+	$('.current > .right-control').live "mouseup", ->
 		$(this).css
 			'border-left': '40px solid rgb(255,255,255)'	
-	$('.current').children('.right-control').click ->
-		current_position = slide_right( current_position )
-	current_position
+	$('.current > .right-control').live "click", ->
+		console.log "right control has been clicked"
+		clearTimeout( t )
+		console.log "timeout has been cleared"
+		console.log "the current position was " + current_position
+		slide_right()
+		console.log "The current position is now: " + current_position
 			
 	# Clear Timeout Listers
 	# When either a .control, .slide, .dot, or a .primary-header, stop the automation
-	$('.control').click ->
-		clearTimeout( t )
-	$('.dot').click ->
-		clearTimeout( t )
+		
 	$('.slide').click ->
 		clearTimeout( t )
-	$('.primary-header').click ->
-		clearTimeout( t )
+
+
 
 	# The Dot Click Lister
 	# First we find the position of the clicked dot, set that as the current position
-	# and then slide with the new current position.
+	# and then slide to the new current position. Last, we clear the timeout
 	$('.dot').click ->
 		current_position = $('.dot').index(this)
-		current_position = slide( current_position )
-
-
-
-	# Misc. Functions
-	# Color the curent position dot
-	
-	color_dots = ( current_position ) ->
-		$(dots).css
-			'background-color': 'transparent'
-		$(dots[current_position]).css
-			'background-color': 'rgb(50,0,0)'
+		slide()
+		clearTimeout( t )
 
 
 
 	# TAB CLICK FUNCTION
+	
+	# Primary header click
+	# on the click of the header, do a whole lot of things...
 	$('.primary-header').click ->
+		
+		# clear the timeout, remove the current class from all slide-wrappers
+		# then add the current class to the slider wrapper with the
+		# same index as the clicked header.
+		clearTimeout( t )
 		$(".slider-wrapper").removeClass( "current" )
 		this_index = $('.primary-header').index(this)
-		console.log( this_index )
-		console.log( $('.slider-wrapper').get(this_index) )
 		$('.slider-wrapper').get(this_index).className += " current"		
-		# define your variables
+	
+		# redefine the variables
 		slides = $('.current').find('.slide')
 		slide_width = $('.slide').width() + 30
 		number_of_slides = slides.length
 		current_position = 0
 		dots = $('.current').find('.dot')
-		# alter the slide-inner div
+
+		# set the current slide-inner div's width and color the first dot
 		$('.current').find('.slide-inner').css
 			'width': number_of_slides * slide_width
-		# set the first dot
-		color_dots( current_position )
-		# animate on a timer						
+		color_dots()
+
+		# begin animation						
 		t = setTimeout( =>
-			automate( current_position )
+			automate()
 		,5000)
-	# set the first dot
-	color_dots( current_position )
-	# animate on a timer						
-	t = setTimeout( =>
-		automate( current_position )
-	,5000)	
+	
+	
+	# THE MAIN PROGRAM	
 
 
