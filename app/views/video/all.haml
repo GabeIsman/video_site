@@ -1,2 +1,5 @@
+= will_paginate @videos
 - @videos.each do |v|
   = render :partial => '/video/thumbnail', :object => v, :as => :video
+.clear
+= will_paginate @videos

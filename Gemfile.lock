@@ -125,6 +125,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.29)
+    will_paginate (3.0.2)
     youtube_it (2.0.1)
       builder
       faraday (>= 0.7.3)
@@ -144,4 +145,5 @@ DEPENDENCIES
   ruby-debug19
   sass
   sunspot_rails
+  will_paginate
   youtube_it

@@ -38,6 +38,7 @@ def add_or_update_video(yt_video)
   # Three is a magic number -- the third thumbnail in the list is the big one
   db_video.big_thumbnail_url = yt_video.thumbnails.select{|t| t.height == 360 && t.width == 480}.first.url
   db_video.embed_html = yt_video.embed_html # TODO make sure this doesn't break IE
+	db_video.views = yt_video.view_count
   db_video.save!
 end
 

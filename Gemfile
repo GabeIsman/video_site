@@ -23,6 +23,7 @@ gem 'youtube_it'
 gem 'daemons'
 gem 'rails_autolink'
 gem 'sunspot_rails'
+gem 'will_paginate'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'

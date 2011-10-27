@@ -7,12 +7,13 @@ class VideoController < ApplicationController
 
 	def search
     @search = Video.search do
+			paginate( :page => params[:page], :per_page => Video.per_page )
 			keywords( params[:search] )
 		end
 	end
 
   def all
-		@videos = Video.all
+		@videos = Video.paginate( :page => params[:page] )
   end
 
   def view

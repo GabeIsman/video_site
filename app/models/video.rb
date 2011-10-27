@@ -1,6 +1,7 @@
 class Video < ActiveRecord::Base
   has_and_belongs_to_many :tags
 	NUM_RELATED_VIDEOS = 5
+	self.per_page = 10
 
 	searchable do
 		text :title, :default_boost => 4
