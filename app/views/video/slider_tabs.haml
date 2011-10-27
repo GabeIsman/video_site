@@ -1,0 +1,9 @@
+- folder_counter = 1
+- folder_names = [ "Featured", "Popular", "Recent", "Something" ]
+- folder_names.each do |name|
+	%header{ :class => "primary-header", :id => "folder-header-#{counter}" }
+		%hgroup
+			%h1
+				= name
+	- folder_counter += 1
+.clear

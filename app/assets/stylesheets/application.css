@@ -116,11 +116,19 @@ body #body-wrapper header#preheader-band {
       background-color: rgba(0, 0, 0, 0.6); }
     #page-wrapper-wrapper #page-wrapper header#folder-header-4 {
       background-color: rgba(0, 0, 0, 0.5); }
-    #page-wrapper-wrapper #page-wrapper #slider-wrapper {
-      background-color: rgba(0, 0, 0, 0.8);
+    #page-wrapper-wrapper #page-wrapper #slider-wrapper-1 {
+      background-color: rgba(0, 0, 0, 0.8); }
+    #page-wrapper-wrapper #page-wrapper #slider-wrapper-2 {
+      background-color: rgba(0, 0, 0, 0.7); }
+    #page-wrapper-wrapper #page-wrapper #slider-wrapper-3 {
+      background-color: rgba(0, 0, 0, 0.6); }
+    #page-wrapper-wrapper #page-wrapper #slider-wrapper-4 {
+      background-color: rgba(0, 0, 0, 0.5); }
+    #page-wrapper-wrapper #page-wrapper .slider-wrapper {
       border-bottom: 10px solid #320000;
+      display: none;
       height: 550px; }
-      #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider {
+      #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider {
         background-color: black;
         float: left;
         margin-top: 50px;
@@ -128,77 +136,80 @@ body #body-wrapper header#preheader-band {
         overflow: hidden;
         width: 540px;
         height: 425px; }
-        #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide {
+        #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide {
           float: left;
           margin-left: 30px;
           padding-top: 32px;
           position: relative;
           width: 480px;
           height: 360px; }
-          #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide .slide-cover {
+          #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide .slide-cover {
             position: absolute;
             width: 480px;
             height: 360px;
             z-index: 4; }
-          #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide img {
+          #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide img {
             width: 460px;
             height: 380px;
             position: absolute;
             display: none; }
-          #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide .gloss {
+          #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide .gloss {
             background-color: rgba(0, 0, 0, 0.5);
             position: absolute;
             width: 480px;
             height: 360px;
             z-index: 2; }
-          #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide hgroup {
+          #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide hgroup {
             background-color: rgba(0, 0, 0, 0.25);
             padding: 5px 10px 15px 10px;
             position: absolute;
             bottom: 0;
             width: 460px;
             z-index: 3; }
-            #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide hgroup h1 {
+            #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide hgroup h1 {
               color: white;
               font-family: "helvetica neue";
               font-size: 40px;
               font-weight: 800;
               line-height: 40px; }
-            #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide hgroup h2 {
+            #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide hgroup h2 {
               color: white;
               font-family: "helvetica neue";
               font-size: 15px;
               font-weight: 300;
               margin-top: 10px; }
-          #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide canvas {
+          #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide canvas {
             position: absolute;
             z-index: 1; }
-          #page-wrapper-wrapper #page-wrapper #slider-wrapper #slider .slide object {
+          #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide object {
             margin-left: 25px; }
-      #page-wrapper-wrapper #page-wrapper #slider-wrapper .control {
+      #page-wrapper-wrapper #page-wrapper .slider-wrapper .control {
         cursor: pointer;
         float: left;
         margin-top: 150px;
-        width: 0; }
-      #page-wrapper-wrapper #page-wrapper #slider-wrapper #left-control {
+        width: 0;
+        height: 0; }
+      #page-wrapper-wrapper #page-wrapper .slider-wrapper .left-control {
         border-bottom: 100px solid transparent;
         border-top: 100px solid transparent;
         border-right: 40px solid white;
         margin-left: 50px; }
-      #page-wrapper-wrapper #page-wrapper #slider-wrapper #right-control {
+      #page-wrapper-wrapper #page-wrapper .slider-wrapper .right-control {
         border-bottom: 100px solid transparent;
         border-top: 100px solid transparent;
         border-left: 40px solid white;
         margin-left: 110px; }
-      #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper {
+      #page-wrapper-wrapper #page-wrapper .slider-wrapper .dots-wrapper {
         margin: 25px auto;
         height: 25px; }
-        #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #dots {
+        #page-wrapper-wrapper #page-wrapper .slider-wrapper .dots-wrapper .dots {
+          display: block;
           float: left;
-          margin: 0 auto; }
-          #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #dots .dot:first-child {
+          margin: 0 auto;
+          position: relative; }
+          #page-wrapper-wrapper #page-wrapper .slider-wrapper .dots-wrapper .dots .dot:first-child {
             margin-left: 0; }
-          #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #dots .dot {
+          #page-wrapper-wrapper #page-wrapper .slider-wrapper .dots-wrapper .dots .dot {
             background-color: transparent;
             border: 1px solid white;
             float: left;
@@ -206,8 +217,10 @@ body #body-wrapper header#preheader-band {
             margin-left: 34px;
             width: 14px;
             height: 14px; }
-          #page-wrapper-wrapper #page-wrapper #slider-wrapper #dots-wrapper #dots #current-dot {
+          #page-wrapper-wrapper #page-wrapper .slider-wrapper .dots-wrapper .dots #current-dot {
             background-color: #320000; }
+    #page-wrapper-wrapper #page-wrapper .current {
+      display: block; }
     #page-wrapper-wrapper #page-wrapper header#featured-tag-wrapper {
       background-color: rgba(0, 0, 0, 0.8);
       border-bottom: 10px solid rgba(100, 0, 0, 0.5);
@@ -227,25 +240,25 @@ body #body-wrapper header#preheader-band {
         text-transform: uppercase; }
     #page-wrapper-wrapper #page-wrapper .tag-wrapper {
       background-color: rgba(0, 0, 0, 0.8);
-      border-bottom: 10px solid rgba(100, 0, 0, 0.5);
+      border-bottom: 10px solid #320000;
       border-radius: 25px;
       float: left;
-      margin-left: 60px;
+      margin-left: 10px;
       margin-top: 40px;
-      width: 390px;
+      width: 440px;
       height: 500px; }
       #page-wrapper-wrapper #page-wrapper .tag-wrapper header.tag-header {
-        background-color: rgba(100, 0, 0, 0.5);
+        background-color: #320000;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
         margin-bottom: 25px;
-        width: 390px;
+        width: 440px;
         height: 50px; }
         #page-wrapper-wrapper #page-wrapper .tag-wrapper header.tag-header hgroup h1 {
           color: white;
-          font-family: "bebas neue";
-          font-size: 35px;
-          font-weight: 400;
+          font-family: "helvetica neue";
+          font-size: 25px;
+          font-weight: 100;
           text-align: center;
           line-height: 50px; }
       #page-wrapper-wrapper #page-wrapper .tag-wrapper ul {

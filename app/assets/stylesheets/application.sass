@@ -140,11 +140,19 @@ body
 
 		$slide-width: 480px
 		$slide-height: 360px
-		#slider-wrapper
+		#slider-wrapper-1
 			background-color: rgba(0,0,0,.8)
+		#slider-wrapper-2
+			background-color: rgba(0,0,0,.7)
+		#slider-wrapper-3
+			background-color: rgba(0,0,0,.6)
+		#slider-wrapper-4
+			background-color: rgba(0,0,0,.5)
+		.slider-wrapper
 			border-bottom: 10px solid rgb(50,0,0)
+			display: none
 			height: 550px
-			#slider
+			.slider
 				background-color: black
 				float: left
 				margin-top: 50px
@@ -204,25 +212,25 @@ body
 				float: left
 				margin-top: 150px
 				width: 0
-				height 0
-			#left-control
+				height: 0
+			.left-control
 				border-bottom: 100px solid transparent
 				border-top: 100px solid transparent
 				border-right: 40px solid rgba(255,255,255,1)
 				margin-left: 50px
-			#right-control
+			.right-control
 				border-bottom: 100px solid transparent
 				border-top: 100px solid transparent
 				border-left: 40px solid rgba(255,255,255,1)
 				margin-left: 110px
-			#dots-wrapper
-				//background-color: rgba(255,255,255,1)
+			.dots-wrapper
 				margin: 25px auto
-				//width: 140px
 				height: 25px
-				#dots
+				.dots
+					display: block
 					float: left
 					margin: 0 auto
+					position: relative
 					.dot:first-child
 						margin-left: 0
 					.dot
@@ -235,6 +243,9 @@ body
 						height: 14px
 					#current-dot
 						background-color: rgb(50,0,0)
+		.current
+			display: block
+
 				
 			
 			
@@ -258,18 +269,18 @@ body
 					text-transform: uppercase
 
 		
-		$tag-wrapper-width: 390px
+		$tag-wrapper-width: 440px
 		.tag-wrapper
 			background-color: rgba(0,0,0,.8)
-			border-bottom: 10px solid rgba(100,0,0,.5)
+			border-bottom: 10px solid rgb(50,0,0)
 			border-radius: 25px
 			float: left
-			margin-left: 60px
+			margin-left: 10px
 			margin-top: 40px
 			width: $tag-wrapper-width
 			height: 500px
 			header.tag-header
-				background-color: rgba(100,0,0,.5)
+				background-color: rgb(50,0,0)
 				border-top-left-radius: 25px
 				border-top-right-radius: 25px
 				margin-bottom: 25px
@@ -278,9 +289,9 @@ body
 				hgroup
 					h1
 						color: rgb(255,255,255)
-						font-family: "bebas neue"
-						font-size: 35px
-						font-weight: 400
+						font-family: "helvetica neue"
+						font-size: 25px
+						font-weight: 100
 						text-align: center
 						line-height: 50px
 			ul
