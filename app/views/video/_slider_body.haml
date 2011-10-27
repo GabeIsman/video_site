@@ -1,7 +1,7 @@
 %div{ :id => "slider-wrapper-#{videos_counter + 1}", :class => "slider-wrapper" }
 	%div{ :id => "left-control-#{videos_counter + 1}", :class => "control left-control" }
 	%div{ :id => "slider-#{videos_counter + 1 }", :class => "slider" }
-		%div{ :id => "slide-inner-#{videos_counter + 1}", :class => "slide-inner"}
+		.slide-inner
 			= render :partial => 'slider_guts', :collection => videos, :as => :video
 	%div{ :id => "right-control-#{videos_counter + 1}", :class => "control right-control" }
 	.clear
