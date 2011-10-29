@@ -14,11 +14,13 @@
 			- tag.homepage_videos( already_displayed_ids ).each do |video|
 				- already_displayed_ids << video.id
 				%li
-					%a{ :href => "/video/view/#{video.id}"}
-						%img{ :src => "#{video.thumbnail_url}" }
+					%a{ :href => "/video/view/#{video.id}", :class => "img-wrapper" }
+						.tab-slide-cover
+						%img{ :src => "#{video.big_thumbnail_url}" }
 					%hgroup
 						%h1
 							= link_to video.title, { :controller => :video, :action => :view, :id => video.id }
+					.clear
 			.clear
 		.clear
 .clear

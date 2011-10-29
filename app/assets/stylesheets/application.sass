@@ -1,6 +1,5 @@
 $full-width: 960px
-
-
+$maroon: rgb(50,0,0)
 
 h1,
 h2,
@@ -16,128 +15,111 @@ li
 a
 	color: inherit
 	text-decoration: none
-body
-	//background-image: url('body-bg.png')
-	#body-wrapper
-		//background-image: url('body-wrapper-bg.png')
 
 
-		header#preheader-band
-			background-color: black
-			box-shadow: 0px 2px 2px black
-			width: 100%
-			height:  50px
+
+header#preheader-band
+	background-color: black
+	box-shadow: 0px 2px 2px black
+	width: 100%
+	height:  50px
+
+
 
 #page-wrapper-wrapper
 	background-color: rgba(0,0,0,.25)
-	//background-color: rgb(100,100,100)
 	#page-wrapper
-		//background-image: url('bg.png')
 		background-image: url('body-wrapper-bg.png')
 		padding-bottom: 90px
 		
-		$nav-height: 80px
-		$button-height: ($nav-height / 4) + 5
-		nav#top li,
-		nav#top input#search-form,
-		nav#top input#go-button
-			background-color: white
-			color: black
-			font-family: "helvetica neue"
-			font-size: 12px
-			font-weight: 400
-		nav#top
-			background-color: rgba(0,0,0,.15)
-			//background-image: url('body-wrapper-bg.png')
-			//background-color: rgba(0,0,0,.3)
-			//background: -moz-linear-gradient( top, rgba(0,0,0,1), rgba(0,0,0,.8) )
-			//box-shadow: 0px 4px 4px rgb(50,0,0)
-			height: $nav-height
-			hgroup
-				float: left
-				margin-left: 10px
-				width: 470px
-				h1
-					color: rgb(50,0,0)
-					font-size: 68px
-					line-height: $nav-height
-					text-align: left
-			ul
-				float: right
-				margin-right: 10px
-				li:hover
-					background-color: rgb(50,0,0)
-				li
-					//background: -moz-linear-gradient( top, rgba(50,0,0,.75), rgba(50,0,0,.25) )
-					background-color: rgba(0,0,0,.15)
-					//background-image: url('body-wrapper-bg.png')
-					color: white
-					cursor: pointer
-					display: block
-					float: right
-					font-weight: 100
-					font-size: 25px
-					text-align: center
-					text-transform: uppercase
-					line-height: 50px
+			// the navigation header
+		header#primary-header
+			$nav-height: 80px
+			nav#top
+				background-color: rgba(0,0,0,.15)
+				height: $nav-height
+				hgroup,
+				ul,
+				form#search-form-wrapper
+					float: left			
+				hgroup
 					margin-left: 10px
-					width: ($full-width - 50) / 4
-					height: 50px
-					ul				
-						background-color: rgb(50,0,0)
-						display: none
-						right: 10
-						position: absolute
+					width: 470px
+					h1
+						color: $maroon
+						font-size: 68px
+						line-height: $nav-height
+						text-align: left
+				form#search-form-wrapper
+					margin-top: 30px
+					input#search-form,
+					input#go-button
+						border: none
+						cursor: pointer
+						float: left
+						height: 25px
+						margin-left: 10px
+					input#search-form
+						font-size: 15px
+						font-weight: 100
+						line-height: 25px
+						padding: 0 10px
+						text-align: left
+						width: 425px - 20
+					input#go-button
+						background-color: $maroon
+						width: 25px
+				ul
+					margin-right: 10px
+					li:hover
+						background-color: $maroon
+					li
+						background-color: rgba(0,0,0,.15)
+						color: white
+						cursor: pointer
+						display: block
+						float: right
+						font-size: 25px
+						text-align: center
+						text-transform: uppercase
+						line-height: 50px
+						margin-left: 10px
 						width: ($full-width - 50) / 4
-						z-index: 10
-						li
-							text-transform: lowercase
-							font-size: 15px
-				li#banner-tab-1
-					background-color: rgb(50,0,0)
-			form#search-form-wrapper
-				height: 50px
-				margin-top: 30px
-				input#search-form
-					border: none
-					float: left
-					font-size: 15px
-					font-weight: 100
-					line-height: 25px
-					margin-left: 10px
-					padding: 0 10px
-					text-align: left
-					width: 425px - 20
-					height: 25px
-				input#go-button
-					//background-image: -moz-linear-gradient( top, rgba(255,255,255,.75), rgba(255,255,255,.25) )
-					background-color: rgb(50,0,0)
-					border: none
-					cursor: pointer
-					float: left
-					margin-left: 10px
-					width: 25px
-					height: 25px
-		
-		$primary-header-height: 50px
-		header.primary-header
+						height: 50px
+						ul				
+							background-color: $maroon
+							display: none
+							right: 10
+							position: absolute
+							width: ($full-width - 50) / 4
+							z-index: 4
+							li
+								text-transform: lowercase
+								font-size: 15px
+					li#banner-tab-1
+						background-color: $maroon
+					
+					
+
+		$folder-header-width: ($full-width - 50) / 4		
+		$folder-header-height: 50px
+		header.folder-header
 			cursor: pointer
 			float: right
 			margin-right: 10px
 			margin-top: 40px
-			width: ($full-width - 50) / 4
-			height: $primary-header-height
+			width: $folder-header-width
+			height: $folder-header-height
 			hgroup
 				h1
 					color: rgba(255,255,255,1)
 					font-size: 25px
 					letter-spacing: 1px
-					line-height: $primary-header-height
+					line-height: $folder-header-height
 					text-align: center
 					text-transform: uppercase
 		header#folder-header-1
 			background-color: rgba(0,0,0,.8)
-			margin-right: 10px
 		header#folder-header-2
 			background-color: rgba(0,0,0,.7)
 		header#folder-header-3
@@ -213,19 +195,17 @@ body
 					object
 						margin-left: 25px
 			.control
+				border-bottom: 100px solid transparent
+				border-top: 100px solid transparent
 				cursor: pointer
 				float: left
 				margin-top: 150px
 				width: 0
 				height: 0
 			.left-control
-				border-bottom: 100px solid transparent
-				border-top: 100px solid transparent
 				border-right: 40px solid rgba(255,255,255,1)
 				margin-left: 50px
 			.right-control
-				border-bottom: 100px solid transparent
-				border-top: 100px solid transparent
 				border-left: 40px solid rgba(255,255,255,1)
 				margin-left: 110px
 			.dots-wrapper
@@ -250,81 +230,116 @@ body
 						background-color: rgb(50,0,0)
 		.current
 			display: block
-
-				
 			
-			
-		header#featured-tag-wrapper
-			background-color: rgba(0,0,0,.8)
-			border-bottom: 10px solid rgba(100,0,0,.5)
-			border-bottom-left-radius: 25px
-			border-bottom-right-radius: 25px
-			float: left
-			margin-left: 10px
-			width: 290px
-			height: $primary-header-height
-			hgroup
-				h1
-					color: rgba(255,255,255,1)
-					font-size: 40px
-					font-weight: 800
-					line-height: $primary-header-height
-					text-align: center
-					text-transform: uppercase
-
-		
-		$tag-wrapper-width: 450px
-		.even
-			margin-left: 10px
-			margin-right: 0px
-			header.tag-header
-				float: left
-				margin-left: 10px
-		.odd
-			margin-left: 40px
-			margin-right: 0px
-			header.tag-header
-				float: right
-				margin-right: 10px
-		.tag-wrapper
-			background-color: rgba(0,0,0,.8)
-			border-bottom: 10px solid rgb(50,0,0)
-			float: left
+		$tag-wrapper-width: $full-width
+		$tag-wrapper-height: (($full-width - 60) / 5) + 50
+		.tag-wrapper	
+			background-color: rgba(0,0,0,.6)
+			border-bottom: 10px solid $maroon
 			margin-top: 90px
+			position: relative
 			width: $tag-wrapper-width
-			height: 500px
+			height: $tag-wrapper-height
 			header.tag-header
-				background-color: rgb(50,0,0)
-				margin-bottom: 25px
+				background-color: rgba(0,0,0,.7)
+				display: block
 				margin-top: -50px
-				width: $tag-wrapper-width - 20
+				margin-left: 10px
+				position: absolute
+				width: $folder-header-width * 2
 				height: 50px
 				hgroup
 					h1
-						color: rgb(255,255,255)
+						color: white
 						font-size: 25px
 						letter-spacing: 1px
+						line-height: 50px
 						text-align: center
 						text-transform: uppercase
-						line-height: 50px
 			ul
-				margin-top: 10px
+				$tab-slide-width: ($full-width - 60) / 5
+				padding-top: 10px
 				li
-					margin-bottom: 60px
+					float: left
+					margin-left: 10px
+					width: $tab-slide-width
+					a
+						.tab-slide-cover
+							background-color: rgba(0,0,0,.5)
+							position: absolute
+							width: $tab-slide-width
+							height: 135px
+						.tab-slide-cover:hover
+							background-color: transparent
+						img
+							width: $tab-slide-width
 					hgroup
 						h1
-							color: rgb(200,200,200)
-							font-size: 20px
-							margin-right: 20px
-							text-align: right
-						h2
-							color: rgb(200,200,200)
-							font-size: 12px
-							font-weight: 300
-							margin: 10px
-					img
-						border: 5px solid black
-						border-radius: 10px
-						float: left
-						margin: 5px 10px
-			
+							a
+								color: rgb(200,200,200)
+								font-weight: 300
+		
+//	$tag-wrapper-width: 450px
+//	$img-width: 120px
+//		$img-height: 90px
+//		.even
+//			margin-left: 10px
+//			margin-right: 0px
+//			header.tag-header
+//				float: left
+//				margin-left: 10px
+//		.odd
+//			margin-left: 40px
+//			margin-right: 0px
+//			header.tag-header
+//				float: right
+//				margin-right: 10px
+//		.tag-wrapper
+//			background-color: rgba(0,0,0,.6)
+//			border-bottom: 10px solid rgb(50,0,0)
+//			float: left
+//			margin-top: 90px
+//			width: $tag-wrapper-width
+//			header.tag-header
+//				background-color: rgba(0,0,0,.7)
+//				margin-top: -50px
+//				width: ($tag-wrapper-width * 3) / 4
+//				height: 50px
+//				hgroup
+//					h1
+//						color: rgb(255,255,255)
+//						font-size: 25px
+//						letter-spacing: 1px
+//						text-align: center
+//						text-transform: uppercase
+//						line-height: 50px
+//			ul
+//				padding: 20px 0
+//				li:hover
+//					background-color: rgba(250,250,250,.25)
+//				li
+//					//border-top: 1px solid white
+//					display: block
+//					padding: 10px 20px
+//					width: $tag-wrapper-width - 40
+//					hgroup
+//						float: left
+//						margin-left: 10px
+//						width: $tag-wrapper-width - $img-width - 40 - 10
+//						h1
+//							color: rgb(150,150,150)
+//							font-size: 15px
+//							font-weight: 400
+//							text-align: right
+//							width: $tag-wrapper-width - $img-width - 40 - 10
+//						h2
+//							color: rgb(125,125,125)
+//							font-size: 12px
+//							font-weight: 300
+//							text-align: right
+//					a.img-wrapper
+//						float: left
+//						width: $img-width
+//						height: $img-height
+//				li:first-child
+//					border-top: none

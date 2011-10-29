@@ -14,7 +14,7 @@ a {
   color: inherit;
   text-decoration: none; }
 
-body #body-wrapper header#preheader-band {
+header#preheader-band {
   background-color: black;
   box-shadow: 0px 2px 2px black;
   width: 100%;
@@ -25,38 +25,50 @@ body #body-wrapper header#preheader-band {
   #page-wrapper-wrapper #page-wrapper {
     background-image: url("body-wrapper-bg.png");
     padding-bottom: 90px; }
-    #page-wrapper-wrapper #page-wrapper nav#top li,
-    #page-wrapper-wrapper #page-wrapper nav#top input#search-form,
-    #page-wrapper-wrapper #page-wrapper nav#top input#go-button {
-      background-color: white;
-      color: black;
-      font-family: "helvetica neue";
-      font-size: 12px;
-      font-weight: 400; }
-    #page-wrapper-wrapper #page-wrapper nav#top {
+    #page-wrapper-wrapper #page-wrapper header#primary-header nav#top {
       background-color: rgba(0, 0, 0, 0.15);
       height: 80px; }
-      #page-wrapper-wrapper #page-wrapper nav#top hgroup {
-        float: left;
+      #page-wrapper-wrapper #page-wrapper header#primary-header nav#top hgroup,
+      #page-wrapper-wrapper #page-wrapper header#primary-header nav#top ul,
+      #page-wrapper-wrapper #page-wrapper header#primary-header nav#top form#search-form-wrapper {
+        float: left; }
+      #page-wrapper-wrapper #page-wrapper header#primary-header nav#top hgroup {
         margin-left: 10px;
         width: 470px; }
-        #page-wrapper-wrapper #page-wrapper nav#top hgroup h1 {
+        #page-wrapper-wrapper #page-wrapper header#primary-header nav#top hgroup h1 {
           color: #320000;
           font-size: 68px;
           line-height: 80px;
           text-align: left; }
-      #page-wrapper-wrapper #page-wrapper nav#top ul {
-        float: right;
+      #page-wrapper-wrapper #page-wrapper header#primary-header nav#top form#search-form-wrapper {
+        margin-top: 30px; }
+        #page-wrapper-wrapper #page-wrapper header#primary-header nav#top form#search-form-wrapper input#search-form,
+        #page-wrapper-wrapper #page-wrapper header#primary-header nav#top form#search-form-wrapper input#go-button {
+          border: none;
+          cursor: pointer;
+          float: left;
+          height: 25px;
+          margin-left: 10px; }
+        #page-wrapper-wrapper #page-wrapper header#primary-header nav#top form#search-form-wrapper input#search-form {
+          font-size: 15px;
+          font-weight: 100;
+          line-height: 25px;
+          padding: 0 10px;
+          text-align: left;
+          width: 405px; }
+        #page-wrapper-wrapper #page-wrapper header#primary-header nav#top form#search-form-wrapper input#go-button {
+          background-color: #320000;
+          width: 25px; }
+      #page-wrapper-wrapper #page-wrapper header#primary-header nav#top ul {
         margin-right: 10px; }
-        #page-wrapper-wrapper #page-wrapper nav#top ul li:hover {
+        #page-wrapper-wrapper #page-wrapper header#primary-header nav#top ul li:hover {
           background-color: #320000; }
-        #page-wrapper-wrapper #page-wrapper nav#top ul li {
+        #page-wrapper-wrapper #page-wrapper header#primary-header nav#top ul li {
           background-color: rgba(0, 0, 0, 0.15);
           color: white;
           cursor: pointer;
           display: block;
           float: right;
-          font-weight: 100;
           font-size: 25px;
           text-align: center;
           text-transform: uppercase;
@@ -64,48 +76,26 @@ body #body-wrapper header#preheader-band {
           margin-left: 10px;
           width: 227.5px;
           height: 50px; }
-          #page-wrapper-wrapper #page-wrapper nav#top ul li ul {
+          #page-wrapper-wrapper #page-wrapper header#primary-header nav#top ul li ul {
             background-color: #320000;
             display: none;
             right: 10;
             position: absolute;
             width: 227.5px;
-            z-index: 10; }
-            #page-wrapper-wrapper #page-wrapper nav#top ul li ul li {
+            z-index: 4; }
+            #page-wrapper-wrapper #page-wrapper header#primary-header nav#top ul li ul li {
               text-transform: lowercase;
               font-size: 15px; }
-        #page-wrapper-wrapper #page-wrapper nav#top ul li#banner-tab-1 {
+        #page-wrapper-wrapper #page-wrapper header#primary-header nav#top ul li#banner-tab-1 {
           background-color: #320000; }
-      #page-wrapper-wrapper #page-wrapper nav#top form#search-form-wrapper {
-        height: 50px;
-        margin-top: 30px; }
-        #page-wrapper-wrapper #page-wrapper nav#top form#search-form-wrapper input#search-form {
-          border: none;
-          float: left;
-          font-size: 15px;
-          font-weight: 100;
-          line-height: 25px;
-          margin-left: 10px;
-          padding: 0 10px;
-          text-align: left;
-          width: 405px;
-          height: 25px; }
-        #page-wrapper-wrapper #page-wrapper nav#top form#search-form-wrapper input#go-button {
-          background-color: #320000;
-          border: none;
-          cursor: pointer;
-          float: left;
-          margin-left: 10px;
-          width: 25px;
-          height: 25px; }
-    #page-wrapper-wrapper #page-wrapper header.primary-header {
+    #page-wrapper-wrapper #page-wrapper header.folder-header {
       cursor: pointer;
       float: right;
       margin-right: 10px;
       margin-top: 40px;
       width: 227.5px;
       height: 50px; }
-      #page-wrapper-wrapper #page-wrapper header.primary-header hgroup h1 {
+      #page-wrapper-wrapper #page-wrapper header.folder-header hgroup h1 {
         color: white;
         font-size: 25px;
         letter-spacing: 1px;
@@ -113,8 +103,7 @@ body #body-wrapper header#preheader-band {
         text-align: center;
         text-transform: uppercase; }
     #page-wrapper-wrapper #page-wrapper header#folder-header-1 {
-      background-color: rgba(0, 0, 0, 0.8);
-      margin-right: 10px; }
+      background-color: rgba(0, 0, 0, 0.8); }
     #page-wrapper-wrapper #page-wrapper header#folder-header-2 {
       background-color: rgba(0, 0, 0, 0.7); }
     #page-wrapper-wrapper #page-wrapper header#folder-header-3 {
@@ -187,19 +176,17 @@ body #body-wrapper header#preheader-band {
           #page-wrapper-wrapper #page-wrapper .slider-wrapper .slider .slide object {
             margin-left: 25px; }
       #page-wrapper-wrapper #page-wrapper .slider-wrapper .control {
+        border-bottom: 100px solid transparent;
+        border-top: 100px solid transparent;
         cursor: pointer;
         float: left;
         margin-top: 150px;
         width: 0;
         height: 0; }
       #page-wrapper-wrapper #page-wrapper .slider-wrapper .left-control {
-        border-bottom: 100px solid transparent;
-        border-top: 100px solid transparent;
         border-right: 40px solid white;
         margin-left: 50px; }
       #page-wrapper-wrapper #page-wrapper .slider-wrapper .right-control {
-        border-bottom: 100px solid transparent;
-        border-top: 100px solid transparent;
         border-left: 40px solid white;
         margin-left: 110px; }
       #page-wrapper-wrapper #page-wrapper .slider-wrapper .dots-wrapper {
@@ -224,70 +211,43 @@ body #body-wrapper header#preheader-band {
             background-color: #320000; }
     #page-wrapper-wrapper #page-wrapper .current {
       display: block; }
-    #page-wrapper-wrapper #page-wrapper header#featured-tag-wrapper {
-      background-color: rgba(0, 0, 0, 0.8);
-      border-bottom: 10px solid rgba(100, 0, 0, 0.5);
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
-      float: left;
-      margin-left: 10px;
-      width: 290px;
-      height: 50px; }
-      #page-wrapper-wrapper #page-wrapper header#featured-tag-wrapper hgroup h1 {
-        color: white;
-        font-size: 40px;
-        font-weight: 800;
-        line-height: 50px;
-        text-align: center;
-        text-transform: uppercase; }
-    #page-wrapper-wrapper #page-wrapper .even {
-      margin-left: 10px;
-      margin-right: 0px; }
-      #page-wrapper-wrapper #page-wrapper .even header.tag-header {
-        float: left;
-        margin-left: 10px; }
-    #page-wrapper-wrapper #page-wrapper .odd {
-      margin-left: 40px;
-      margin-right: 0px; }
-      #page-wrapper-wrapper #page-wrapper .odd header.tag-header {
-        float: right;
-        margin-right: 10px; }
     #page-wrapper-wrapper #page-wrapper .tag-wrapper {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.6);
       border-bottom: 10px solid #320000;
-      float: left;
       margin-top: 90px;
-      width: 450px;
-      height: 500px; }
+      position: relative;
+      width: 960px;
+      height: 230px; }
       #page-wrapper-wrapper #page-wrapper .tag-wrapper header.tag-header {
-        background-color: #320000;
-        margin-bottom: 25px;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: block;
         margin-top: -50px;
-        width: 430px;
+        margin-left: 10px;
+        position: absolute;
+        width: 455px;
         height: 50px; }
         #page-wrapper-wrapper #page-wrapper .tag-wrapper header.tag-header hgroup h1 {
           color: white;
           font-size: 25px;
           letter-spacing: 1px;
+          line-height: 50px;
           text-align: center;
-          text-transform: uppercase;
-          line-height: 50px; }
+          text-transform: uppercase; }
       #page-wrapper-wrapper #page-wrapper .tag-wrapper ul {
-        margin-top: 10px; }
+        padding-top: 10px; }
         #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li {
-          margin-bottom: 60px; }
-          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h1 {
+          float: left;
+          margin-left: 10px;
+          width: 180px; }
+          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li a .tab-slide-cover {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            width: 180px;
+            height: 135px; }
+          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li a .tab-slide-cover:hover {
+            background-color: transparent; }
+          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li a img {
+            width: 180px; }
+          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h1 a {
             color: #c8c8c8;
-            font-size: 20px;
-            margin-right: 20px;
-            text-align: right; }
-          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h2 {
-            color: #c8c8c8;
-            font-size: 12px;
-            font-weight: 300;
-            margin: 10px; }
-          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li img {
-            border: 5px solid black;
-            border-radius: 10px;
-            float: left;
-            margin: 5px 10px; }
+            font-weight: 300; }

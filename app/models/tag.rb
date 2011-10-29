@@ -10,7 +10,7 @@ class Tag < ActiveRecord::Base
 		selected = []
 		candidates.each do |v|
 			selected << v unless already_displayed_video_ids.include?( v.id )
-			break if selected.count == 3
+			break if selected.count == 5
 		end
 		return selected
 	end
