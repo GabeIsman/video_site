@@ -110,10 +110,7 @@ $ ->
 	$('.current > .right-control').live "click", ->
 		console.log "right control has been clicked"
 		clearTimeout( t )
-		console.log "timeout has been cleared"
-		console.log "the current position was " + current_position
 		slide_right()
-		console.log "The current position is now: " + current_position
 			
 	# Clear Timeout Listers
 	# When either a .control, .slide, .dot, or a .primary-header, stop the automation
@@ -137,14 +134,14 @@ $ ->
 	
 	# Primary header click
 	# on the click of the header, do a whole lot of things...
-	$('.primary-header').click ->
+	$('.folder-header').click ->
 		
 		# clear the timeout, remove the current class from all slide-wrappers
 		# then add the current class to the slider wrapper with the
 		# same index as the clicked header.
 		clearTimeout( t )
 		$(".slider-wrapper").removeClass( "current" )
-		this_index = $('.primary-header').index(this)
+		this_index = $('.folder-header').index(this)
 		$('.slider-wrapper').get(this_index).className += " current"		
 	
 		# redefine the variables
