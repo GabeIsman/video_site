@@ -1,4 +1,7 @@
 class TagController < ApplicationController
+
+	before_filter :login_required, :only => [:update_homepage, :edit_homepage_tags]
+
   def index
     @tags = Tag.all
   end

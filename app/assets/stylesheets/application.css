@@ -251,3 +251,12 @@ header#preheader-band {
           #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h1 a {
             color: #c8c8c8;
             font-weight: 300; }
+    #page-wrapper-wrapper #page-wrapper .user-form {
+      width: 250px;
+      margin: auto;
+      margin-top: 50px; }
+    #page-wrapper-wrapper #page-wrapper .flash {
+      width: 300px;
+      text-align: center;
+      margin: auto;
+      padding: 10px; }

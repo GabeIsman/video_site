@@ -24,6 +24,7 @@ gem 'daemons'
 gem 'rails_autolink'
 gem 'sunspot_rails'
 gem 'will_paginate'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'

@@ -136,6 +136,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   coffee-script
   daemons
   haml

@@ -1,0 +1,23 @@
+.user-form
+  Create an account
+  = form_for @user do |f|
+    .error-messages
+      %h2
+        Form is invalid
+      %ul
+        - for message in @user.errors.full_messages
+          %li
+            = message
+      %p
+        = f.label :email 
+        %br
+        = f.text_field :email
+      %p
+        = f.label :password
+        %br
+        = f.password_field :password
+      %p
+        = f.label :password_confirmation
+        %br
+        = f.password_field :password_confirmation
+      = f.submit
