@@ -5,7 +5,9 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '> 0.3'
+group :development do
+	gem 'mysql2', '> 0.3'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -15,7 +17,9 @@ gem 'mysql2', '> 0.3'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
-gem 'ruby-debug19', :require => 'ruby-debug'
+#group :development do 
+#	gem 'ruby-debug19', :require => 'ruby-debug'
+#end
 gem 'haml'
 gem 'sass'
 gem 'coffee-script'
@@ -25,6 +29,7 @@ gem 'rails_autolink'
 gem 'sunspot_rails'
 gem 'will_paginate'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'pg', :group => :production
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
