@@ -24,7 +24,6 @@ group :assets do
 	gem 'sass'
 	gem 'coffee-script'
 	gem 'uglifier'
-	gem 'therubyracer'
 end
 gem 'haml'
 gem 'youtube_it'
