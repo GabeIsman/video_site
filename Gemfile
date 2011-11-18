@@ -21,12 +21,12 @@ end
 #group :development do 
 #end
 group :assets do
-	gem 'haml'
 	gem 'sass'
 	gem 'coffee-script'
 	gem 'uglifier'
 	gem 'therubyracer'
 end
+gem 'haml'
 gem 'youtube_it'
 gem 'daemons'
 gem 'rails_autolink'
