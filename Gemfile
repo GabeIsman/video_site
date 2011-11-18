@@ -6,7 +6,8 @@ gem 'rails', '3.1.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
-	gem 'mysql2', '> 0.3'
+	#gem 'mysql2', '> 0.3'
+	gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 # Use unicorn as the web server
@@ -18,11 +19,14 @@ end
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
 #group :development do 
-#	gem 'ruby-debug19', :require => 'ruby-debug'
 #end
-gem 'haml'
-gem 'sass'
-gem 'coffee-script'
+group :assets do
+	gem 'haml'
+	gem 'sass'
+	gem 'coffee-script'
+	gem 'uglifier'
+	gem 'therubyracer'
+end
 gem 'youtube_it'
 gem 'daemons'
 gem 'rails_autolink'
