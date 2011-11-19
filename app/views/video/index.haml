@@ -1,27 +1,17 @@
 = render :partial => 'slider'
 
 - already_displayed_ids = []
-- @important_tags.each_with_index do |tag, index|
-	- classname = "odd"
-	- classname = "even" if index % 2 == 0
-	.tag-wrapper{ :id => "tag-wrapper-#{tag.id}", :class => "#{classname}" }
+- @important_tags.each do |tag|
+
+	.tag-wrapper{ :id => "tag-wrapper-#{tag.id}" }
 		%header.tag-header
 			%hgroup
 				%h1
 					= link_to tag.name, { :controller => :tag, :action => :view, 
 																:id => "#{tag.name.gsub( " ", "_" )}" }
-		%ul
-			- tag.homepage_videos( already_displayed_ids ).each do |video|
-				- already_displayed_ids << video.id
-				%li
-					%a{ :href => "/video/view/#{video.id}", :class => "img-wrapper" }
-						.tab-slide-cover
-						%img{ :src => "#{video.big_thumbnail_url}" }
-					%hgroup
-						%h1
-							= link_to video.title, { :controller => :video, :action => :view, :id => video.id }
-					.clear
-			.clear
-		.clear
+		- videos = tag.homepage_videos( already_displayed_ids )
+		- videos.each do |video|
+			-	already_displayed_ids << video.id
+		= render :partial => 'five_videos', :object => videos, :as => :videos
 .clear
 

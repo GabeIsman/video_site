@@ -160,8 +160,3 @@ $ ->
 		t = setTimeout( =>
 			automate()
 		,5000)
-	
-	
-	# THE MAIN PROGRAM	
-
-

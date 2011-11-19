@@ -1,4 +1,6 @@
-= render :partial => 'video_data', :object => @video, :as => :video
+%div.embed-wrapper
+	= render :partial => 'video_data', :object => @video, :as => :video
+	.clear
 %h1
-  Related Videos
+	Related Videos
 = render :partial => 'thumbnail', :collection => @video.related_videos, :as => :video
