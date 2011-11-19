@@ -1,355 +1,346 @@
+// general variables
 $full-width: 960px
 $maroon: rgb(50,0,0)
 
+// general styles
 h1,
 h2,
 h3,
 h4,
 h5,
 li
-  font-family: "helvetica neue"
-  font-weight: 100
-
+	font-family: "helvetica neue"
+	font-weight: 100
 li
-  list-style-type: none
+	list-style-type: none
 a
-  color: inherit
-  text-decoration: none
+	color: inherit
+	text-decoration: none
+p
+	font-family: "helvetica neue"
+	font-size: 14px
+	font-weight: 300
 
 
 
+// the preheader band
 header#preheader-band
-  background-color: black
-  box-shadow: 0px 2px 2px black
-  width: 100%
-  height:  50px
+	background-color: black
+	box-shadow: 0px 2px 2px black
+	width: 100%
+	height:	 50px
 
 
 
+// the page wrapper
 #page-wrapper-wrapper
-  background-color: rgba(0,0,0,.25)
-  #page-wrapper
-    background-image: url('body-wrapper-bg.png')
-    padding-bottom: 90px
-    
-      // the navigation header
-    header#primary-header
-      $nav-height: 80px
-      nav#top
-        background-color: rgba(0,0,0,.15)
-        height: $nav-height
-        hgroup,
-        ul,
-        form#search-form-wrapper
-          float: left     
-        hgroup
-          margin-left: 10px
-          width: 470px
-          h1
-            color: $maroon
-            font-size: 68px
-            line-height: $nav-height
-            text-align: left
-        form#search-form-wrapper
-          margin-top: 30px
-          input#search-form,
-          input#go-button
-            border: none
-            cursor: pointer
-            float: left
-            height: 25px
-            margin-left: 10px
-          input#search-form
-            font-size: 15px
-            font-weight: 100
-            line-height: 25px
-            padding: 0 10px
-            text-align: left
-            width: 425px - 20
-          input#go-button
-            background-color: $maroon
-            width: 25px
-        ul
-          margin-right: 10px
-          li:hover
-            background-color: $maroon
-          li
-            background-color: rgba(0,0,0,.15)
-            color: white
-            cursor: pointer
-            display: block
-            float: right
-            font-size: 25px
-            text-align: center
-            text-transform: uppercase
-            line-height: 50px
-            margin-left: 10px
-            width: ($full-width - 50) / 4
-            height: 50px
-            ul        
-              background-color: $maroon
-              display: none
-              right: 10
-              position: absolute
-              width: ($full-width - 50) / 4
-              z-index: 4
-              li
-                text-transform: lowercase
-                font-size: 15px
-          li#banner-tab-1
-            background-color: $maroon
-          
-          
+	background-color: rgba(0,0,0,.25)
+	#page-wrapper
+		background-image: url('body-wrapper-bg.png')
+		padding-bottom: 90px
 
-    $folder-header-width: ($full-width - 50) / 4    
-    $folder-header-height: 50px
-    header.folder-header
-      cursor: pointer
-      float: right
-      margin-right: 10px
-      margin-top: 40px
-      width: $folder-header-width
-      height: $folder-header-height
-      hgroup
-        h1
-          color: rgba(255,255,255,1)
-          font-size: 25px
-          letter-spacing: 1px
-          line-height: $folder-header-height
-          text-align: center
-          text-transform: uppercase
-    header#folder-header-1
-      background-color: rgba(0,0,0,.8)
-    header#folder-header-2
-      background-color: rgba(0,0,0,.7)
-    header#folder-header-3
-      background-color: rgba(0,0,0,.6)
-    header#folder-header-4
-      background-color: rgba(0,0,0,.5)
+		
 
-    $slide-width: 480px
-    $slide-height: 360px
-    #slider-wrapper-1
-      background-color: rgba(0,0,0,.8)
-    #slider-wrapper-2
-      background-color: rgba(0,0,0,.7)
-    #slider-wrapper-3
-      background-color: rgba(0,0,0,.6)
-    #slider-wrapper-4
-      background-color: rgba(0,0,0,.5)
-    .slider-wrapper
-      border-bottom: 10px solid rgb(50,0,0)
-      display: none
-      height: 550px
-      .slider
-        background-color: black
-        float: left
-        margin-top: 50px
-        margin-left: 110px
-        overflow: hidden
-        width: $slide-width + 60
-        height: $slide-height + 65
-        .slide
-          float: left
-          margin-left: 30px
-          padding-top: 32px
-          position: relative
-          width: $slide-width
-          height: $slide-height
-          .slide-cover
-            position: absolute
-            width: $slide-width
-            height: $slide-height
-            z-index: 4
-          img
-            width: 460px
-            height: 380px
-            position: absolute
-            display: none
-          .gloss
-            background-color: rgba(0,0,0,.5)
-            position: absolute
-            width: $slide-width
-            height: $slide-height 
-            z-index: 2          
-          hgroup
-            background-color: rgba(0,0,0,.25)
-            padding: 5px 10px 15px 10px
-            position: absolute
-            bottom: 0
-            width: $slide-width - 20
-            z-index: 3
-            h1
-              color: white
-              font-size: 40px
-              font-weight: 800
-              line-height: 40px
-            h2
-              color: white
-              font-size: 15px
-              font-weight: 300
-              margin-top: 10px
-          canvas
-            position: absolute
-            z-index: 1
-          object
-            margin-left: 25px
-      .control
-        border-bottom: 100px solid transparent
-        border-top: 100px solid transparent
-        cursor: pointer
-        float: left
-        margin-top: 150px
-        width: 0
-        height: 0
-      .left-control
-        border-right: 40px solid rgba(255,255,255,1)
-        margin-left: 50px
-      .right-control
-        border-left: 40px solid rgba(255,255,255,1)
-        margin-left: 110px
-      .dots-wrapper
-        margin: 25px auto
-        height: 25px
-        .dots
-          display: block
-          float: left
-          margin: 0 auto
-          position: relative
-          .dot:first-child
-            margin-left: 0
-          .dot
-            background-color: transparent
-            border: 1px solid white
-            float: left
-            margin-top: 4px
-            margin-left: 34px
-            width: 14px
-            height: 14px
-          #current-dot
-            background-color: rgb(50,0,0)
-    .current
-      display: block
-      
-    $tag-wrapper-width: $full-width
-    $tag-wrapper-height: (($full-width - 60) / 5) + 50
-    .tag-wrapper  
-      background-color: rgba(0,0,0,.6)
-      border-bottom: 10px solid $maroon
-      margin-top: 90px
-      position: relative
-      width: $tag-wrapper-width
-      height: $tag-wrapper-height
-      header.tag-header
-        background-color: rgba(0,0,0,.7)
-        display: block
-        margin-top: -50px
-        margin-left: 10px
-        position: absolute
-        width: $folder-header-width * 2
-        height: 50px
-        hgroup
-          h1
-            color: white
-            font-size: 25px
-            letter-spacing: 1px
-            line-height: 50px
-            text-align: center
-            text-transform: uppercase
-      ul
-        $tab-slide-width: ($full-width - 60) / 5
-        padding-top: 10px
-        li
-          float: left
-          margin-left: 10px
-          width: $tab-slide-width
-          a
-            .tab-slide-cover
-              background-color: rgba(0,0,0,.5)
-              position: absolute
-              width: $tab-slide-width
-              height: 135px
-            .tab-slide-cover:hover
-              background-color: transparent
-            img
-              width: $tab-slide-width
-          hgroup
-            h1
-              a
-                color: rgb(200,200,200)
-                font-weight: 300
+		// generalized form class
+		.user-form
+			width: 250px
+			margin: auto
+			margin-top: 50px
 
-    .user-form
-      width: 250px
-      margin: auto
-      margin-top: 50px
 
-    .flash
-      width: 300px
-      text-align: center
-      margin: auto
-      padding: 10px
-//  $tag-wrapper-width: 450px
-//  $img-width: 120px
-//    $img-height: 90px
-//    .even
-//      margin-left: 10px
-//      margin-right: 0px
-//      header.tag-header
-//        float: left
-//        margin-left: 10px
-//    .odd
-//      margin-left: 40px
-//      margin-right: 0px
-//      header.tag-header
-//        float: right
-//        margin-right: 10px
-//    .tag-wrapper
-//      background-color: rgba(0,0,0,.6)
-//      border-bottom: 10px solid rgb(50,0,0)
-//      float: left
-//      margin-top: 90px
-//      width: $tag-wrapper-width
-//      header.tag-header
-//        background-color: rgba(0,0,0,.7)
-//        margin-top: -50px
-//        width: ($tag-wrapper-width * 3) / 4
-//        height: 50px
-//        hgroup
-//          h1
-//            color: rgb(255,255,255)
-//            font-size: 25px
-//            letter-spacing: 1px
-//            text-align: center
-//            text-transform: uppercase
-//            line-height: 50px
-//      ul
-//        padding: 20px 0
-//        li:hover
-//          background-color: rgba(250,250,250,.25)
-//        li
-//          //border-top: 1px solid white
-//          display: block
-//          padding: 10px 20px
-//          width: $tag-wrapper-width - 40
-//          hgroup
-//            float: left
-//            margin-left: 10px
-//            width: $tag-wrapper-width - $img-width - 40 - 10
-//            h1
-//              color: rgb(150,150,150)
-//              font-size: 15px
-//              font-weight: 400
-//              text-align: right
-//              width: $tag-wrapper-width - $img-width - 40 - 10
-//            h2
-//              color: rgb(125,125,125)
-//              font-size: 12px
-//              font-weight: 300
-//              text-align: right
-//          a.img-wrapper
-//            float: left
-//            width: $img-width
-//            height: $img-height
-//        li:first-child
-//          border-top: none
+
+		// for error messages
+		.flash
+			width: 300px
+			text-align: center
+			margin: auto
+			padding: 10px
+
+
+
+		// the navigation header
+		header#primary-header
+			$nav-height: 80px
+			nav#top
+				background-color: rgba(0,0,0,.15)
+				height: $nav-height
+				hgroup,
+				ul,
+				form#search-form-wrapper
+					float: left			
+				hgroup
+					margin-left: 10px
+					width: 470px
+					h1
+						color: $maroon
+						font-size: 68px
+						line-height: $nav-height
+						text-align: left
+				form#search-form-wrapper
+					margin-top: 30px
+					input#search-form,
+					input#go-button
+						border: none
+						cursor: pointer
+						float: left
+						height: 25px
+						margin-left: 10px
+					input#search-form
+						font-size: 15px
+						font-weight: 100
+						line-height: 25px
+						padding: 0 10px
+						text-align: left
+						width: 425px - 20
+					input#go-button
+						background-color: $maroon
+						width: 25px
+				ul
+					margin-right: 10px
+					li:hover
+						background-color: $maroon
+					li
+						background-color: rgba(0,0,0,.15)
+						color: white
+						cursor: pointer
+						display: block
+						float: right
+						font-size: 25px
+						text-align: center
+						text-transform: uppercase
+						line-height: 50px
+						margin-left: 10px
+						width: ($full-width - 50) / 4
+						height: 50px
+						ul				
+							background-color: $maroon
+							display: none
+							right: 10
+							position: absolute
+							width: ($full-width - 50) / 4
+							z-index: 4
+							li
+								text-transform: lowercase
+								font-size: 15px
+					li#banner-tab-1
+						background-color: $maroon
+					
+					
+		
+		// splash page folder headers
+		$folder-header-width: ($full-width - 50) / 4		
+		$folder-header-height: 50px
+		header.folder-header
+			cursor: pointer
+			float: right
+			margin-right: 10px
+			margin-top: 40px
+			width: $folder-header-width
+			height: $folder-header-height
+			hgroup
+				h1
+					color: rgba(255,255,255,1)
+					font-size: 25px
+					letter-spacing: 1px
+					line-height: $folder-header-height
+					text-align: center
+					text-transform: uppercase
+		header#folder-header-1
+			background-color: rgba(0,0,0,.8)
+		header#folder-header-2
+			background-color: rgba(0,0,0,.7)
+		header#folder-header-3
+			background-color: rgba(0,0,0,.6)
+		header#folder-header-4
+			background-color: rgba(0,0,0,.5)
+
+
+
+		// splash page folder slider
+		$slide-width: 480px
+		$slide-height: 360px
+		#slider-wrapper-1
+			background-color: rgba(0,0,0,.8)
+		#slider-wrapper-2
+			background-color: rgba(0,0,0,.7)
+		#slider-wrapper-3
+			background-color: rgba(0,0,0,.6)
+		#slider-wrapper-4
+			background-color: rgba(0,0,0,.5)
+		.slider-wrapper
+			border-bottom: 10px solid rgb(50,0,0)
+			display: none
+			height: 550px
+			.slider
+				background-color: black
+				float: left
+				margin-top: 50px
+				margin-left: 110px
+				overflow: hidden
+				width: $slide-width + 60
+				height: $slide-height + 65
+				.slide
+					float: left
+					margin-left: 30px
+					padding-top: 32px
+					position: relative
+					width: $slide-width
+					height: $slide-height
+					.slide-cover
+						position: absolute
+						width: $slide-width
+						height: $slide-height
+						z-index: 4
+					img
+						width: 460px
+						height: 380px
+						position: absolute
+						display: none
+					.gloss
+						background-color: rgba(0,0,0,.5)
+						position: absolute
+						width: $slide-width
+						height: $slide-height 
+						z-index: 2					
+					hgroup
+						background-color: rgba(0,0,0,.25)
+						padding: 5px 10px 15px 10px
+						position: absolute
+						bottom: 0
+						width: $slide-width - 20
+						z-index: 3
+						h1
+							color: white
+							font-size: 40px
+							font-weight: 800
+							line-height: 40px
+						h2
+							color: white
+							font-size: 15px
+							font-weight: 300
+							margin-top: 10px
+					canvas
+						position: absolute
+						z-index: 1
+					object
+						margin-left: 25px
+			.control
+				border-bottom: 100px solid transparent
+				border-top: 100px solid transparent
+				cursor: pointer
+				float: left
+				margin-top: 150px
+				width: 0
+				height: 0
+			.left-control
+				border-right: 40px solid rgba(255,255,255,1)
+				margin-left: 50px
+			.right-control
+				border-left: 40px solid rgba(255,255,255,1)
+				margin-left: 110px
+			.dots-wrapper
+				margin: 25px auto
+				height: 25px
+				.dots
+					display: block
+					float: left
+					margin: 0 auto
+					position: relative
+					.dot:first-child
+						margin-left: 0
+					.dot
+						background-color: transparent
+						border: 1px solid white
+						float: left
+						margin-top: 4px
+						margin-left: 34px
+						width: 14px
+						height: 14px
+					#current-dot
+						background-color: rgb(50,0,0)
+		.current
+			display: block
+		
+
+
+		// splash page tags
+		$tag-wrapper-width: $full-width
+		$tag-wrapper-height: (($full-width - 60) / 5) + 50
+		.tag-wrapper	
+			background-color: rgba(0,0,0,.15)
+			border-bottom: 10px solid rgba(50,0,0,.5)
+			margin-top: 90px
+			position: relative
+			width: $tag-wrapper-width
+			height: $tag-wrapper-height
+			header.tag-header
+				background-color: rgba(0,0,0,.2)
+				display: block
+				margin-top: -50px
+				margin-left: 10px
+				position: absolute
+				width: $folder-header-width * 2
+				height: 50px
+				hgroup
+					h1
+						color: white
+						font-size: 25px
+						letter-spacing: 1px
+						line-height: 50px
+						text-align: center
+						text-transform: uppercase
+			ul
+				$tab-slide-width: ($full-width - 60) / 5
+				padding-top: 10px
+				li
+					float: left
+					margin-left: 10px
+					width: $tab-slide-width
+					a
+						//.tab-slide-cover
+						//	background-color: rgba(255,255,255,.5)
+						//	position: absolute
+						//	width: $tab-slide-width
+						//	height: 135px
+						//.tab-slide-cover:hover
+						//	background-color: transparent
+						img
+							opacity: .75
+							width: $tab-slide-width
+						img:hover
+							opacity: 1
+					hgroup
+						h1
+							a
+								color: rgba(50,0,0,.5)
+								font-size: 14px
+								font-weight: 400
+
+		// single view styles
+		div.embed-wrapper
+			background-color: rgba(0,0,0,.15)
+			border-bottom: 10px solid rgba(50,0,0,.5)
+			margin: 50px 10px 0 10px
+			padding-bottom: 50px
+			width: $full-width - 20
+			header.embed-header
+				background-color: rgba(0,0,0,.05)
+				margin-bottom: 50px
+				padding: 10px 0 
+				width: $full-width - 20
+				hgroup
+					h1
+						color: white
+						font-size: 40px
+						text-align: center
+					p
+						color: rgb(100,100,100)
+						text-align: center
+					p.video-tags
+						color: rgba(50,0,0,.5)
+						font-weight: 600
+						a:hover
+							color: rgb(50,0,0)
+			iframe
+				margin-left: ( ( $full-width - 20 ) - 800 ) / 2
+				

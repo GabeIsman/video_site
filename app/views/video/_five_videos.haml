@@ -1,0 +1,11 @@
+%ul
+	- videos.each do |video|	
+		%li
+			%a{ :href => "/video/view/#{video.id}", :class => "img-wrapper" }
+				.tab-slide-cover
+				%img{ :src => "#{video.big_thumbnail_url}" }
+			%hgroup
+				%h1
+					= link_to video.title, { :controller => :video, :action => :view, :id => video.id }
+			.clear
+.clear

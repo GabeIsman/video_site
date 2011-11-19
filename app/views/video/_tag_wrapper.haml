@@ -1,0 +1,20 @@
+- videos = args[1]
+- tag = args[0]
+.tag-wrapper{ :id => "tag-wrapper-#{tag.id}" }
+	%header.tag-header
+		%hgroup
+			%h1
+				= link_to tag.name, { :controller => :tag, :action => :view, 
+															:id => "#{tag.name.gsub( " ", "_" )}" }
+	%ul
+		- videos.each do |video|	
+			%li
+				%a{ :href => "/video/view/#{video.id}", :class => "img-wrapper" }
+					.tab-slide-cover
+					%img{ :src => "#{video.big_thumbnail_url}" }
+				%hgroup
+					%h1
+						= link_to video.title, { :controller => :video, :action => :view, :id => video.id }
+				.clear
+			.clear
+	.clear

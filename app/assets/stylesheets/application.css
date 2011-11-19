@@ -14,6 +14,11 @@ a {
   color: inherit;
   text-decoration: none; }
 
+p {
+  font-family: "helvetica neue";
+  font-size: 14px;
+  font-weight: 300; }
+
 header#preheader-band {
   background-color: black;
   box-shadow: 0px 2px 2px black;
@@ -25,6 +30,15 @@ header#preheader-band {
   #page-wrapper-wrapper #page-wrapper {
     background-image: url("body-wrapper-bg.png");
     padding-bottom: 90px; }
+    #page-wrapper-wrapper #page-wrapper .user-form {
+      width: 250px;
+      margin: auto;
+      margin-top: 50px; }
+    #page-wrapper-wrapper #page-wrapper .flash {
+      width: 300px;
+      text-align: center;
+      margin: auto;
+      padding: 10px; }
     #page-wrapper-wrapper #page-wrapper header#primary-header nav#top {
       background-color: rgba(0, 0, 0, 0.15);
       height: 80px; }
@@ -212,14 +226,14 @@ header#preheader-band {
     #page-wrapper-wrapper #page-wrapper .current {
       display: block; }
     #page-wrapper-wrapper #page-wrapper .tag-wrapper {
-      background-color: rgba(0, 0, 0, 0.6);
-      border-bottom: 10px solid #320000;
+      background-color: rgba(0, 0, 0, 0.15);
+      border-bottom: 10px solid rgba(50, 0, 0, 0.5);
       margin-top: 90px;
       position: relative;
       width: 960px;
       height: 230px; }
       #page-wrapper-wrapper #page-wrapper .tag-wrapper header.tag-header {
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.2);
         display: block;
         margin-top: -50px;
         margin-left: 10px;
@@ -239,24 +253,37 @@ header#preheader-band {
           float: left;
           margin-left: 10px;
           width: 180px; }
-          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li a .tab-slide-cover {
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            width: 180px;
-            height: 135px; }
-          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li a .tab-slide-cover:hover {
-            background-color: transparent; }
           #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li a img {
+            opacity: 0.75;
             width: 180px; }
+          #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li a img:hover {
+            opacity: 1; }
           #page-wrapper-wrapper #page-wrapper .tag-wrapper ul li hgroup h1 a {
-            color: #c8c8c8;
-            font-weight: 300; }
-    #page-wrapper-wrapper #page-wrapper .user-form {
-      width: 250px;
-      margin: auto;
-      margin-top: 50px; }
-    #page-wrapper-wrapper #page-wrapper .flash {
-      width: 300px;
-      text-align: center;
-      margin: auto;
-      padding: 10px; }
+            color: rgba(50, 0, 0, 0.5);
+            font-size: 14px;
+            font-weight: 400; }
+    #page-wrapper-wrapper #page-wrapper div.embed-wrapper {
+      background-color: rgba(0, 0, 0, 0.15);
+      border-bottom: 10px solid rgba(50, 0, 0, 0.5);
+      margin: 50px 10px 0 10px;
+      padding-bottom: 50px;
+      width: 940px; }
+      #page-wrapper-wrapper #page-wrapper div.embed-wrapper header.embed-header {
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-bottom: 50px;
+        padding: 10px 0;
+        width: 940px; }
+        #page-wrapper-wrapper #page-wrapper div.embed-wrapper header.embed-header hgroup h1 {
+          color: white;
+          font-size: 40px;
+          text-align: center; }
+        #page-wrapper-wrapper #page-wrapper div.embed-wrapper header.embed-header hgroup p {
+          color: #646464;
+          text-align: center; }
+        #page-wrapper-wrapper #page-wrapper div.embed-wrapper header.embed-header hgroup p.video-tags {
+          color: rgba(50, 0, 0, 0.5);
+          font-weight: 600; }
+          #page-wrapper-wrapper #page-wrapper div.embed-wrapper header.embed-header hgroup p.video-tags a:hover {
+            color: #320000; }
+      #page-wrapper-wrapper #page-wrapper div.embed-wrapper iframe {
+        margin-left: 70px; }
