@@ -60,7 +60,6 @@ GEM
     mysql2 (0.3.7)
     nokogiri (1.5.0)
     oauth (0.4.5)
-    pg (0.11.0)
     polyglot (0.3.2)
     pr_geohash (1.0.0)
     rack (1.3.3)
@@ -131,7 +130,6 @@ DEPENDENCIES
   daemons
   haml
   mysql2 (> 0.3)
-  pg
   rails (= 3.1.0)
   rails_autolink
   sass

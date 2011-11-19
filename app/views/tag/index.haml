@@ -1,0 +1,10 @@
+- alphabetized_list = {}
+- @tags.each do |t|
+  - alphabetized_list["#{t.name[0].upcase}"] = [] if alphabetized_list["#{t.name[0].upcase}"].nil?
+  - alphabetized_list["#{t.name[0].upcase}"] << t
+- alphabetized_list.to_a.sort.each do |arr|
+  %h1
+    = arr[0]
+  - arr[1].each do |t|
+    = link_to t.name, { :controller => :tag, :action => :view, 
+                        :id => "#{t.name.gsub( " ", "_" )}" }

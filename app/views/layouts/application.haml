@@ -21,17 +21,17 @@
                 = submit_tag "", :id => "go-button", :name => nil
               %ul
                 - counter = 1
-                - links = { :browse => '#', :home => '/', :tags => '', :lucky => '' }
+                - links = { :browse => '#', :home => '/', :tags => '/tag/index', :lucky => '/video/lucky' }
                 - links.each do |key, value|
-                  %li{ :id => "banner-tab-#{counter}" }
-                    = link_to "#{key}", value if key != :browse
-                    - if key == :browse
-                      browse
-                      %ul
-                        - @important_tags.each do |tag|
-                          %li
-                            = link_to "#{tag.name}", "/tag/view/#{tag}"
-                    - counter += 1
+                  %a{ :href => "#{value}" }
+                    %li{ :id => "banner-tab-#{counter}" }
+                      = key.to_s
+                      - if key == :browse
+                        %ul
+                          - @important_tags.each do |tag|
+                            %li
+                              = link_to "#{tag.name}", "/tag/view/#{tag}"
+                      - counter += 1
                 
           .clear
 

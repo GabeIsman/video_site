@@ -34,6 +34,12 @@ class VideoController < ApplicationController
     video.update_attributes!(params[:video])
   end
 
+	def lucky
+		random_id = Video.all.map(&:id).sample
+		@video = Video.find(random_id)
+		render 'view'
+	end
+
 	# XHR ONLY
 	def render_video
 		video = find_video(params[:id])
