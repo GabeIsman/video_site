@@ -3,7 +3,7 @@
 # You might want to change this
 ENV["RAILS_ENV"] ||= "production"
 
-require File.dirname(__FILE__) + "../../config/application"
+require File.dirname(__FILE__) + "/../../config/application"
 Rails.application.require_environment!
 youtube_key = "AI39si63GkmwwSUsM06R5uFfHw8lBPs2WZ2llWTuCtTpcPksChgfbQFIa-Gee7mrRKp01Mg-DDWp8s9tXgODmR0dx7cw6vUrSA"
 
