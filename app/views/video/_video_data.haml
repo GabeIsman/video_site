@@ -6,5 +6,6 @@
 			= auto_link video.description
 		%p.video-tags
 			= video.tags.map{|t| link_to t.name, "/tag/view/#{t.name.gsub(' ', '_')}" }.join(", ").html_safe
+		= render :partial => 'sharing'
 = render :partial => 'embed', :object => video
 
