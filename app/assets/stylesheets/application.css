@@ -94,12 +94,18 @@ header#preheader-band {
             background-color: #320000;
             display: none;
             right: 10;
+            padding-bottom: 25px;
             position: absolute;
             width: 227.5px;
             z-index: 4; }
-            #page-wrapper-wrapper #page-wrapper header#primary-header nav#top ul li ul li {
-              text-transform: lowercase;
-              font-size: 15px; }
+            #page-wrapper-wrapper #page-wrapper header#primary-header nav#top ul li ul li.header-tag {
+              font-size: 15px;
+              font-weight: 500; }
+            #page-wrapper-wrapper #page-wrapper header#primary-header nav#top ul li ul li.featured-tags {
+              font-size: 15px;
+              height: 25px;
+              line-height: 25px;
+              text-transform: lowercase; }
         #page-wrapper-wrapper #page-wrapper header#primary-header nav#top ul li#banner-tab-1 {
           background-color: #320000; }
     #page-wrapper-wrapper #page-wrapper header.folder-header {
@@ -284,12 +290,14 @@ header#preheader-band {
           text-align: center; }
         #page-wrapper-wrapper #page-wrapper div.embed-wrapper header.embed-header hgroup p {
           color: #646464;
+          margin: 0 20px;
           text-align: center; }
         #page-wrapper-wrapper #page-wrapper div.embed-wrapper header.embed-header hgroup p.video-tags {
           color: rgba(50, 0, 0, 0.5);
           font-weight: 600; }
           #page-wrapper-wrapper #page-wrapper div.embed-wrapper header.embed-header hgroup p.video-tags a:hover {
-            color: #320000; }
+            color: #320000;
+            text-transform: lowercase; }
       #page-wrapper-wrapper #page-wrapper div.embed-wrapper iframe {
         margin-left: 70px; }
     #page-wrapper-wrapper #page-wrapper div.letters-wrapper {
@@ -316,3 +324,20 @@ header#preheader-band {
           text-transform: lowercase; }
         #page-wrapper-wrapper #page-wrapper div.letters-wrapper div.letter ul li a:hover {
           color: #320000; }
+    #page-wrapper-wrapper #page-wrapper div.single-tag-wrapper hgroup {
+      background-color: rgba(0, 0, 0, 0.05); }
+      #page-wrapper-wrapper #page-wrapper div.single-tag-wrapper hgroup h1 {
+        color: white;
+        font-size: 50px;
+        margin: 15px;
+        text-align: center; }
+    #page-wrapper-wrapper #page-wrapper div.single-tag-wrapper a div.video-wrapper {
+      float: left;
+      margin: 10px 10px 10px 40px;
+      width: 400px; }
+      #page-wrapper-wrapper #page-wrapper div.single-tag-wrapper a div.video-wrapper img {
+        float: left;
+        margin-right: 15px; }
+      #page-wrapper-wrapper #page-wrapper div.single-tag-wrapper a div.video-wrapper h1 {
+        color: rgba(50, 0, 0, 0.5);
+        font-weight: 800; }

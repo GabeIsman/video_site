@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 %html
-  %head
-    %title
-      Videos.Oberlin
-    = stylesheet_link_tag "reset", "960", "application"
-    = javascript_include_tag "jquery", "application"
-    = csrf_meta_tags
-  %body
-    #body-wrapper
-      %header#preheader-band
-      #page-wrapper-wrapper.container_16
-        #page-wrapper.container_16
-          %header#primary-header
-            %nav#top.container_16
-              %hgroup
-                %h1
-                  = link_to "Oberlin Videos", :root
-              = form_tag '/video/search' , :method => :get, :id => "search-form-wrapper"  do
-                = text_field_tag "search", params[:search] || "search", :id => "search-form"
-                = submit_tag "", :id => "go-button", :name => nil
-              %ul
-                - counter = 1
-                - links = { :browse => '#', :home => '/', :tags => '/tag/index', :lucky => '/video/lucky' }
-                - links.each do |key, value|
-                  %a{ :href => "#{value}" }
-                    %li{ :id => "banner-tab-#{counter}" }
-                      = key.to_s
-                      - if key == :browse
-                        %ul
-                          - @important_tags.each do |tag|
-                            %li
-                              = link_to "#{tag.name}", "/tag/view/#{tag}"
-                      - counter += 1
-                
-          .clear
+	%head
+		%title
+			Oberlin Videos
+		= stylesheet_link_tag "reset", "960", "application"
+		= javascript_include_tag "jquery", "application"
+		= csrf_meta_tags
+	%body
+		#body-wrapper
+			%header#preheader-band
+			#page-wrapper-wrapper.container_16
+				#page-wrapper.container_16
+					%header#primary-header
+						%nav#top.container_16
+							%hgroup
+								%h1
+									= link_to "Oberlin Videos", :root
+							= form_tag '/video/search' , :method => :get, :id => "search-form-wrapper"	do
+								= text_field_tag "search", params[:search] || "search", :id => "search-form"
+								= submit_tag "", :id => "go-button", :name => nil
+							%ul
+								- counter = 1
+								- links = { :browse => '#', :home => '/', :tags => '/tag/index', :lucky => '/video/lucky' }
+								- links.each do |key, value|
+									%a{ :href => "#{value}" }
+										%li{ :id => "banner-tab-#{counter}" }
+											= key.to_s
+											- if key == :browse
+												%ul
+													%li.header-tag
+														featured tags
+													- @important_tags.each do |tag|
+														%li.featured-tags
+															= link_to "#{tag.name}", "/tag/view/#{tag}"
+													/%li.header-tag
+													/	popular tags
+													/ - @popular_tags.each do |tag|
+													/	%li.popular-tags
+													/		= link_to "#{tag.name}". "/tag/view/#{tag}"
+											- counter += 1
+											
+								
+					.clear
 
-          - flash.each do |name, msg|
-            .flash{ :id => "flash_#{name}" }
-              %h2
-                = msg
-          = yield
+					- flash.each do |name, msg|
+						.flash{ :id => "flash_#{name}" }
+							%h2
+								= msg
+					= yield

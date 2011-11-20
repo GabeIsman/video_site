@@ -116,12 +116,19 @@ header#preheader-band
 							background-color: $maroon
 							display: none
 							right: 10
+							padding-bottom: 25px
 							position: absolute
 							width: ($full-width - 50) / 4
 							z-index: 4
-							li
-								text-transform: lowercase
+							li.header-tag
 								font-size: 15px
+								font-weight: 500
+							li.featured-tags
+								font-size: 15px
+								height: 25px
+								line-height: 25px
+								text-transform: lowercase
+								
 					li#banner-tab-1
 						background-color: $maroon
 					
@@ -297,13 +304,6 @@ header#preheader-band
 					margin-left: 10px
 					width: $tab-slide-width
 					a
-						//.tab-slide-cover
-						//	background-color: rgba(255,255,255,.5)
-						//	position: absolute
-						//	width: $tab-slide-width
-						//	height: 135px
-						//.tab-slide-cover:hover
-						//	background-color: transparent
 						img
 							opacity: .75
 							width: $tab-slide-width
@@ -342,12 +342,14 @@ header#preheader-band
 						text-align: center
 					p
 						color: rgb(100,100,100)
+						margin: 0 20px
 						text-align: center
 					p.video-tags
 						color: rgba(50,0,0,.5)
 						font-weight: 600
 						a:hover
 							color: rgb(50,0,0)
+							text-transform: lowercase
 			iframe
 				margin-left: ( ( $full-width - 20 ) - 800 ) / 2
 				
@@ -380,4 +382,30 @@ header#preheader-band
 							text-transform: lowercase
 						a:hover
 							color: rgb(50,0,0)
+		
+		
+		
+		// tag single view
+		div.single-tag-wrapper
+			hgroup
+				background-color: rgba(0,0,0,.05)
+				h1
+					color: white
+					font-size: 50px
+					margin: 15px
+					text-align: center
+			a
+				div.video-wrapper
+					float: left
+					margin: 10px 10px 10px 40px
+					width: 400px
+					img
+						float: left
+						margin-right: 15px
+					h1
+						color: rgba(50,0,0,.5)
+						font-weight: 800
+						
+						
+					
 				

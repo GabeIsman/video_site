@@ -1,4 +1,6 @@
-%h2{ :style => "font-size: 25px; text-align: center; margin: 15px" }
-  = @tag.name
-%div
-  = render :partial => '/video/thumbnail', :collection => @tag.videos, :as => :video
+%div.single-tag-wrapper
+	%hgroup
+		%h1
+			= @tag.name
+	%div.thumbnail-wrapper
+		= render :partial => '/video/thumbnail', :collection => @tag.videos, :as => :video
