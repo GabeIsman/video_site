@@ -3,11 +3,11 @@ class Video < ActiveRecord::Base
 	NUM_RELATED_VIDEOS = 5
 	self.per_page = 10
 
-	searchable do
-		text :title, :default_boost => 4
-		text :tags, :default_boost => 2
-		text :description
-	end
+	#searchable do
+	#	text :title, :default_boost => 4
+	#	text :tags, :default_boost => 2
+	#	text :description
+	#end
 
 	# TODO this could be better/faster
 	def related_videos
