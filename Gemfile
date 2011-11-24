@@ -32,7 +32,7 @@ gem 'rails_autolink'
 gem 'sunspot_rails'
 gem 'will_paginate'
 gem 'bcrypt-ruby', :require => 'bcrypt'
-#gem 'pg', :group => :production
+gem 'pg', :group => :production
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
