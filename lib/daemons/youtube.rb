@@ -43,8 +43,6 @@ def load_videos
 	Rails.application.require_environment!
 	youtube_key = "AI39si63GkmwwSUsM06R5uFfHw8lBPs2WZ2llWTuCtTpcPksChgfbQFIa-Gee7mrRKp01Mg-DDWp8s9tXgODmR0dx7cw6vUrSA"
 
-  # Replace this with your code
-  Rails.logger.auto_flushing = true
   Rails.logger.info "Grabbing youtube videos at #{Time.now}.\n"
   client = YouTubeIt::Client.new(:dev_key => youtube_key)
   if !client
