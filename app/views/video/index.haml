@@ -1,5 +1,6 @@
 = render :partial => 'slider'
 
+
 - already_displayed_ids = []
 - @important_tags.each do |tag|
 
@@ -14,4 +15,4 @@
 			-	already_displayed_ids << video.id
 		= render :partial => 'five_videos', :object => videos, :as => :videos
 .clear
-
+= link_to "Edit this page", '/tag/edit_homepage_tags'  if @current_user

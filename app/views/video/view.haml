@@ -1,12 +1,13 @@
 %div.embed-wrapper
-	= render :partial => 'video_data', :object => @video, :as => :video
-	.clear
+  = render :partial => 'video_data', :object => @video, :as => :video
+  .clear
+  = link_to "edit", :controller => :video, :action => :edit, :id => @video.id if @current_user
 
 .tag-wrapper
-	%header.tag-header
-		%hgroup
-			%h1
-				related videos				
-	= render :partial => 'five_videos', :object => @video.related_videos, :as => :videos
+  %header.tag-header
+    %hgroup
+      %h1
+        related videos        
+  = render :partial => 'five_videos', :object => @video.related_videos, :as => :videos
 
 //= render :partial => 'thumbnail', :collection => @video.related_videos, :as => :video

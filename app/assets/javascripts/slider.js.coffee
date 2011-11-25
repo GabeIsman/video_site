@@ -73,10 +73,7 @@ $ ->
 	# The Automate Function
 	# Slide right then wait five seconds before sliding right and calling itself.
 	automate = () ->
-		console.log "the automate function has been called."
-		console.log "the current position was " + current_position
 		slide_right()
-		console.log "the current position is now " + current_position
 		t = setTimeout( =>
 			automate()
 		,5000 )
@@ -91,12 +88,8 @@ $ ->
 		$(this).css
 			'border-right': '40px solid rgb(255,255,255)'	
 	$('.current > .left-control').live "click", ->
-		console.log "left control has been clicked"
 		clearTimeout( t )
-		console.log "timeout has been cleared"
-		console.log "the current position was " + current_position
 		slide_left()
-		console.log "The current position is now: " + current_position
 
 	# Right Control Listener and Functions
 	# When the right control is clicked, change the color of the button then
@@ -108,7 +101,6 @@ $ ->
 		$(this).css
 			'border-left': '40px solid rgb(255,255,255)'	
 	$('.current > .right-control').live "click", ->
-		console.log "right control has been clicked"
 		clearTimeout( t )
 		slide_right()
 			

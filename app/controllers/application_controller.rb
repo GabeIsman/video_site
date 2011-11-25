@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 	
   before_filter :populate_instance_variables
+	before_filter :current_user
 
 	private
 
@@ -15,15 +16,13 @@ class ApplicationController < ActionController::Base
 	end
 
   def populate_instance_variables
-    #@featured = Tag.find_by_name("featured").videos.limit(5)   
-    @featured = Video.limit(5)
-    @popular = Video.limit(5)
-    @recent = Video.limit(5)
+		featured = Tag.find_by_name("featured") 
+    @featured = featured.nil? ? Video.limit(5) : featured.videos.limit(5)   
+    @popular = Video.order("views DESC").limit(5)
+    @recent = Video.order(:created_at).limit(5)
     @something = Video.limit(5)
-    @video_catagories = [ @featured, @popular, @recent, @something ] 
-    
+    @video_catagories = [ @featured, @popular, @recent, @something ]     
     @important_tags = Tag.where("homepage > 0")
-    #@popular_tags = Tag.where()
-    
   end
+  
 end
