@@ -6,10 +6,14 @@ class VideoController < ApplicationController
   end
 
 	def search
-    @search = Video.search do
-			paginate( :page => params[:page], :per_page => Video.per_page )
-			keywords( params[:search] )
+		@keywords = params[:search].gsub(/[^\w\d\s]/,'').split(' ') rescue nil
+		if @keywords.nil? || @keywords.select{|k| !k.blank?}.empty?
+			flash[:error] = "Enter a search term"
+			redirect_to :root
 		end
+    @where_clause = @keywords.map{|k| "title LIKE '%#{k}%' OR description LIKE '%#{k}%'"}.join(' OR ')
+		@videos = Video.where(@where_clause).paginate(:page => params[:page])
+		render 'all'
 	end
 
   def all

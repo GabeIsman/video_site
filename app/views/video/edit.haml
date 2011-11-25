@@ -10,11 +10,6 @@
         = f.label "Description"
       %td
         = f.text_area :description
-    %tr
-      %td
-        = f.label "HTML"
-      %td
-        = f.text_area :embed_html
         = f.hidden_field  :id, :value => @video.id
     %tr
       %td

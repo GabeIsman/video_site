@@ -1,7 +1,7 @@
-= will_paginate @search.results
+= will_paginate @search
 .search_results
-  - @search.each_hit_with_result do |hit, video|
+  - @search.each do |video|
     .search_result
       = render :partial => 'thumbnail', :object => video, :as => :video
 .clear
-= will_paginate @search.results
+= will_paginate @search
