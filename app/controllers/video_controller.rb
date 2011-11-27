@@ -11,7 +11,7 @@ class VideoController < ApplicationController
 			flash[:error] = "Enter a search term"
 			redirect_to :root
 		end
-    @where_clause = @keywords.map{|k| "title LIKE '%#{k}%' OR description LIKE '%#{k}%'"}.join(' OR ')
+    @where_clause = @keywords.map{|k| "UPPER(title) LIKE '%#{k.upcase}%' OR UPPER(description) LIKE '%#{k.upcase}%'"}.join(' OR ')
 		@videos = Video.where(@where_clause).paginate(:page => params[:page])
 		render 'all'
 	end
