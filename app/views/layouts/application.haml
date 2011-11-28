@@ -32,7 +32,7 @@
                             featured tags
                           - @important_tags.each do |tag|
                             %li.featured-tags
-                              = link_to "#{tag.name}", "/tag/view/#{tag}"
+                              = link_to "#{tag.name}", "/tag/view/#{tag.name}"
                           /%li.header-tag
                           / popular tags
                           / - @popular_tags.each do |tag|
