@@ -1,7 +1,11 @@
-- folder_names = [ "Featured", "Popular", "Recent", "Something" ]
+- folder_names = [ "Featured", "Popular", "Recent" ]
 - folder_names.each_with_index do |name, i|
-	%header{ :class => "folder-header", :id => "folder-header-#{i+1}" }
-		%hgroup
-			%h1
-				= name
+  %header{ :class => "folder-header", :id => "folder-header-#{i+1}" }
+    %hgroup
+      %h1
+        = name
+%header{ :class => "folder-header", :id => "folder-header-4" }
+  %hgroup
+    %h1
+      = link_to 'lucky', "/video/lucky"
 .clear

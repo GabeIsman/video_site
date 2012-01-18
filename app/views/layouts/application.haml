@@ -19,26 +19,32 @@
               = form_tag '/video/search' , :method => :get, :id => "search-form-wrapper"  do
                 = text_field_tag "search", params[:search] || "search", :id => "search-form"
                 = submit_tag "", :id => "go-button", :name => nil
-              %ul
-                - counter = 1
-                - links = { :browse => '#', :home => '/', :tags => '/tag/index', :lucky => '/video/lucky' }
-                - links.each do |key, value|
-                  %a{ :href => "#{value}" }
-                    %li{ :id => "banner-tab-#{counter}" }
-                      = key.to_s
-                      - if key == :browse
-                        %ul
-                          %li.header-tag
-                            featured tags
-                          - @important_tags.each do |tag|
-                            %li.featured-tags
-                              = link_to "#{tag.name}", "/tag/view/#{tag}"
-                          /%li.header-tag
-                          / popular tags
-                          / - @popular_tags.each do |tag|
-                          / %li.popular-tags
-                          /   = link_to "#{tag.name}". "/tag/view/#{tag}"
-                      - counter += 1
+              
+              .browse-button
+                %h1 Browse
+                %ul
+                  %li.header-tag
+                    featured tags
+                  - @important_tags.each do |tag|
+                    %li.featured-tags
+                      = link_to "#{tag.name}", "/tag/view/#{tag}"
+                  %li.header-tag
+                    featured videos
+                  - @featured.each do |video|
+                    %li.featured-videos
+                      = link_to "#{video.name}", "/video/view/#{video}"
+                  %li.header-tag
+                    popular videos
+                  -@popular.each do |video|
+                    %li.popular-videos
+                      = link_to "#{video.title}", "/video/view/#{video}"
+                  %li.header-tag
+                    = link_to "all tags", :controller => "tag"
+                  .clear
+
+
+
+
                       
                 
           .clear

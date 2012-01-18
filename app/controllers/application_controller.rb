@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     @popular = Video.order("views DESC").limit(5)
     @recent = Video.order(:created_at).limit(5)
     @something = Video.limit(5)
-    @video_catagories = [ @featured, @popular, @recent, @something ]     
+    @video_catagories = [ @featured, @popular, @recent ]     
     @important_tags = Tag.where("homepage > 0")
   end
   

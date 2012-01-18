@@ -2,7 +2,8 @@ development:
   adapter: mysql2
   encoding: utf8
   database: video_development
-  pool: 5       
+  pool: 5
+  timeout: 5000
   username: root
   password: 
   socket: /tmp/mysql.sock
@@ -14,7 +15,8 @@ test:
   adapter: mysql2
   encoding: utf8
   database: video_test
-  pool: 5       
+  pool: 5
+  timeout: 5000     
   username: root
   password: 
   socket: /tmp/mysql.sock
@@ -23,7 +25,8 @@ production:
   adapter: mysql2
   encoding: utf8
   database: video_production
-  pool: 5       
+  pool: 5
+  timeout: 5000   
   username: root
   password: 
   socket: /tmp/mysql.sock

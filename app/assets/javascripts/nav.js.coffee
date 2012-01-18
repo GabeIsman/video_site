@@ -1,3 +1,3 @@
 $ ->
-	$('#banner-tab-1').click ->
+	$('.browse-button').click ->
 		$(this).children('ul').toggle()
