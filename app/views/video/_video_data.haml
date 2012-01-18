@@ -1,11 +1,13 @@
 %header.embed-header
-	%hgroup
-		%h1
-			= video.title
-		%p.video-description
-			= auto_link video.description
-		%p.video-tags
-			= video.tags.map{|t| link_to t.name, "/tag/view/#{t.name.gsub(' ', '_')}" }.join(", ").html_safe
-		= render :partial => 'sharing'
+  %hgroup
+    %h1
+      = raw video.title
+    %p.video-description
+      = raw auto_link video.description
 = render :partial => 'embed', :object => video
+
+%footer.embed-footer
+  %p.video-tags
+    = raw video.tags.map{|t| link_to t.name, "/tag/view/#{t.name.gsub(' ', '_')}" }.join(", ").html_safe
+  = render :partial => 'sharing'
 
