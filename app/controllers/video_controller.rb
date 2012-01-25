@@ -40,8 +40,7 @@ class VideoController < ApplicationController
 
 	def lucky
 		random_id = Video.all.map(&:id).sample
-		@video = Video.find(random_id)
-		render 'view'
+		return redirect_to :controller => :video, :action => :view, :id => random_id
 	end
 
 	# XHR ONLY
