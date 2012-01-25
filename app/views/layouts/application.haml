@@ -32,7 +32,7 @@
                     featured videos
                   - @featured.each do |video|
                     %li.featured-videos
-                      = link_to "#{video.name}", "/video/view/#{video}"
+                      = link_to "#{video.title}", "/video/view/#{video}"
                   %li.header-tag
                     popular videos
                   -@popular.each do |video|

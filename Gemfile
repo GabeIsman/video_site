@@ -9,7 +9,7 @@ group :development do
 	#gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
-gem 'mysql2', '> 0.3'
+#gem 'mysql2', '> 0.3'
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -33,7 +33,7 @@ gem 'sunspot_rails'
 gem 'will_paginate'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'pg'
-# gem 'pg', :group => :production
+gem 'pg', :group => :production
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
