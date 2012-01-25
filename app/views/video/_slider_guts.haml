@@ -6,7 +6,7 @@
 		%h1
 			= video.title
 		%h2
-			= video.description
+			= truncate(video.description, :length => 400, :separator => " ")
 	%div.gloss{ :id => "gloss-#{video.id}" }
 	%canvas.slider-canvas{ :id => "canvas-#{video.id}" }
 	.video-container  
