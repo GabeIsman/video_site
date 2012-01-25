@@ -4,7 +4,7 @@
     %title
       Oberlin Videos
     = stylesheet_link_tag "reset", "960", "application"
-    = javascript_include_tag "jquery", "application"
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js", "jquery", "application"
     = csrf_meta_tags
   %body
     #body-wrapper
@@ -41,12 +41,6 @@
                   %li.header-tag
                     = link_to "all tags", :controller => "tag"
                   .clear
-
-
-
-
-                      
-                
           .clear
 
           - flash.each do |name, msg|
