@@ -27,17 +27,17 @@
                     featured tags
                   - @important_tags.each do |tag|
                     %li.featured-tags
-                      = link_to "#{tag.name}", "/tag/view/#{tag}"
+                      = link_to "#{tag.name}", "/tag/view/#{tag.id}"
                   %li.header-tag
                     featured videos
                   - @featured.each do |video|
                     %li.featured-videos
-                      = link_to "#{video.title}", "/video/view/#{video}"
+                      = link_to "#{video.title}", "/video/view/#{video.id}"
                   %li.header-tag
                     popular videos
                   -@popular.each do |video|
                     %li.popular-videos
-                      = link_to "#{video.title}", "/video/view/#{video}"
+                      = link_to "#{video.title}", "/video/view/#{video.id}"
                   %li.header-tag
                     = link_to "all tags", :controller => "tag"
                   .clear

@@ -12,8 +12,8 @@ class VideoController < ApplicationController
 			redirect_to :root
 		end
     @where_clause = @keywords.map{|k| "UPPER(title) LIKE '%#{k.upcase}%' OR UPPER(description) LIKE '%#{k.upcase}%'"}.join(' OR ')
-		@videos = Video.where(@where_clause).paginate(:page => params[:page])
-		render 'all'
+		@search = Video.where(@where_clause).paginate(:page => params[:page])
+    flash.now[:notice] = "Sorry, no results found." if @search.empty?
 	end
 
   def all
