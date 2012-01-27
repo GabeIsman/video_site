@@ -1,9 +1,6 @@
 :javascript
-  players = new Array();
   function onYouTubePlayerReady ( playerapiid ) {
-    //players.push( getElementByID( playerapiid ) );
-    //console.log( players + "players" );
-    alert( playerapiid );
+    players.push( document.getElementById( playerapiid ) );
   }
   var params  = { allowScriptAccess: "always"};
   var atts    = { id: "#{slider_embed.youtube_id}" }

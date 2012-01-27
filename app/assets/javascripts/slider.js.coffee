@@ -52,9 +52,11 @@ $ ->
 		$('.slide').children('.gloss, .slide-cover, hgroup, .slider-canvas').css
 			'display': 'block'
 		color_dots()
+		# Global array players holds all active youtube players
+		player.stopVideo() for player in players
 	
 	# Slide Right
-	# Slide right by incrimenting the current position variable and then
+	# Slide right by incrementing the current position variable and then
 	# calling the slide function
 	slide_right = () ->
 		current_position += 1
