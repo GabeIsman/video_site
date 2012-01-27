@@ -1,8 +1,9 @@
 :javascript
+  players = new Array();
   function onYouTubePlayerReady ( playerapiid ) {
-    alert ( playerapiid );
+    players.push( getElementByID( playerapiid ) );
+    console.log( players + "players" )
   }
-  alert("got here");
   var params  = { allowScriptAccess: "always"};
   var atts    = { id: "#{slider_embed.youtube_id}" }
   swfobject.embedSWF("http://www.youtube.com/v/#{slider_embed.youtube_id}?enablejsapi=1&playerapiid=#{slider_embed.youtube_id}&version=3&autoplay=1",
