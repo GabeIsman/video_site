@@ -1,13 +1,19 @@
-.user-form 
+= form_tag sessions_path do
   %h1
     Log in
-  = form_tag sessions_path do
-    %p
-      = label_tag :email
-      %br
-      = text_field_tag :email
-    %p
-      = label_tag :password
-      %br
-      = password_field_tag :password
-    = submit_tag "Log in"
+  %table
+    %tr
+      %th
+        = label_tag :email
+      %td
+        = text_field_tag :email
+    %tr
+      %th
+        = label_tag :password
+      %td
+        = password_field_tag :password
+    %tr
+      %th
+      %td
+        = submit_tag "Log in"
+  
