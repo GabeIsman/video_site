@@ -1,5 +1,5 @@
 players = []
 
-onYouTubePlayerReady = ( playerId ) ->
-	alert( "player ready called sweet!" )
+#onYouTubePlayerReady = ( playerId ) ->
+#	alert( "player ready called sweet!" )
 
