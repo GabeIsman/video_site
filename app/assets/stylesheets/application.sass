@@ -285,7 +285,7 @@ header#preheader-band
             position: absolute
             z-index: 1
           object
-            margin-left: 25px
+            //margin-left: 25px
       .control
         border-bottom: 100px solid transparent
         border-top: 100px solid transparent
@@ -471,6 +471,45 @@ header#preheader-band
             color: rgba(50,0,0,.5)
             font-weight: 800
 
+
+
+
+// SEARCH STYLES
+.search_result
+  background-color: rgba(0,0,0,.25)
+  float: left
+  margin: 20px
+  width: $full-width - 80px
+  a
+    .video-wrapper
+      img
+        float: left
+        margin: 10px
+      h1
+        color: $maroon
+        font-size: 40px
+        font-weight: 600
+        margin-top: 10px
+        margin-right: 10px
+        text-align: right
+      p
+        margin-bottom: 10px
+        margin-right: 10px
+        text-align: right
+        
+.pagination
+  margin-left: 20px
+  .previous_page,
+  .current,
+  a
+    margin-right: 10px
+    margin-top: 10px
+    float: left
+    font-family: "helvetica neue"
+    font-weight: 400
+    font-style: normal
+  .current
+    font-weight: bold
 
 // CMS STYLES
 .flash
